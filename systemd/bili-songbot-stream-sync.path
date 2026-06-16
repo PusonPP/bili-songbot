@@ -1,0 +1,9 @@
+[Unit]
+Description=Watch bili-live-keeper stream.env changes
+
+[Path]
+PathChanged=/opt/bili-live-keeper/runtime/stream.env
+Unit=bili-songbot-stream-sync.service
+
+[Install]
+WantedBy=multi-user.target

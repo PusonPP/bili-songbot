@@ -1,0 +1,9 @@
+[Unit]
+Description=Apply Bilibili stream env to bili-songbot and restart it
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+Environment=MAX_STREAM_ENV_AGE_SECONDS=1800
+ExecStart=/usr/local/sbin/bili-songbot-use-keeper-stream

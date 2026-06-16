@@ -1,0 +1,53 @@
+# 生产默认配置。机密信息不要写在这里，写入 config/.env。
+database_path: runtime/state.db
+log_dir: logs
+health_bind: 127.0.0.1
+health_port: 8787
+
+stream:
+  output_width: 1280
+  output_height: 720
+  fps: 30
+  video_bitrate: 4000k
+  video_maxrate: 4500k
+  video_bufsize: 9000k
+  audio_bitrate: 160k
+  audio_sample_rate: 48000
+  audio_channels: 2
+  x264_preset: veryfast
+  x264_tune: zerolatency
+  gop_seconds: 2
+  chunk_seconds: 20.0
+  transition_seconds: 2.15
+  transition_half_seconds: 1.075
+  ui_refresh_min_interval: 0.5
+
+bilibili:
+  enabled: false
+  mode: web              # web | stdin | disabled
+  room_id: 0
+  sessdata: ""
+  command_prefixes: ["点歌", "點歌", "song", "dg"]
+  allow_direct_alias: true
+
+queue:
+  max_size: 10
+  user_cooldown_seconds: 60
+  recent_history_size: 8
+  fuzzy_min_alias_len: 3
+  fuzzy_score_cutoff: 90
+  reject_duplicate_in_queue: true
+
+ui:
+  font_path: /usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc
+  output_path: runtime/ui_overlay.png
+  show_random_preview: 3
+  show_request_queue: 6
+  right_top_notice: "部分歌词翻译及时轴仅供参考，目前正在升级优化中，提供帮助或反馈意见请加QQ群：801136573"
+
+output:
+  mode: local            # local | rtmp
+  rtmp_url: ""
+  rtmp_stream_key: ""
+  local_output: runtime/local_test.flv
+  fifo_path: runtime/live.ts.fifo

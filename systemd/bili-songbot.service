@@ -1,0 +1,19 @@
+[Unit]
+Description=Bilibili Songbot Live Stream
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/srv/bili-songbot
+Environment=PYTHONUNBUFFERED=1
+ExecStartPre=/bin/rm -f /srv/bili-songbot/runtime/live.ts.fifo
+ExecStart=/srv/bili-songbot/.venv/bin/python -m bili_songbot
+Restart=no
+KillSignal=SIGTERM
+TimeoutStopSec=15
+StandardOutput=append:/srv/bili-songbot/logs/systemd.log
+StandardError=append:/srv/bili-songbot/logs/systemd.log
+
+[Install]
+WantedBy=multi-user.target

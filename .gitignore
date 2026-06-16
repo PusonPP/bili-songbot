@@ -1,0 +1,61 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.bak*
+*.zip
+
+# Secrets and local environment files.
+.env
+.env.*
+!.env.example
+config/.env
+paired/live-keeper/.env
+paired/live-keeper/.env.*
+!paired/live-keeper/.env.example
+
+# Runtime state, logs, diagnostics, and generated outputs.
+*.log
+*.err.log
+runtime/
+logs/
+paired/live-keeper/runtime/
+paired/live-keeper/logs/
+paired/live-keeper/src/*.egg-info/
+
+# Cookies and auth material.
+cookies*.json
+*.cookies
+cookies.txt
+biliup-cookies.json
+
+# Virtual environments, caches, and local tool output.
+.biliup-venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.html
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.trace.zip
+
+# Media libraries and rendered videos are managed outside Git.
+media/normalized/*
+media/cache/*
+media/transition/*
+*.mp4
+*.mkv
+*.mov
+*.flv
+*.ts
+*.mp3
+*.m4a
+*.wav
+*.aac
+*.ass
+*.srt
+!media/normalized/.gitkeep
+!media/cache/.gitkeep
+!media/transition/.gitkeep

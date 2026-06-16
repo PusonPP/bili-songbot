@@ -1,0 +1,18 @@
+# 42 首生产模板。复制为 songs.yaml 后逐项填写。
+songs:
+  - song_id: "song_001"
+    display_name: "歌曲名 1"
+    file_path: "media/source/songs/歌曲名1.mp4"
+    aliases: ["代号1", "song1", "01"]
+    duration: 0.0
+    weight: 1.0
+    enabled: true
+    tags: []
+    notes: ""
+    normalized_file_path: "media/normalized/song_001_720p30.mp4"
+    preprocessed_file_path: "media/normalized/song_001_720p30.mp4"
+    transition_policy:
+      enabled: true
+      mode: "alpha_overlay"
+      transition_asset: "media/transition/transition_720p30_argb.mov"
+      overlap_seconds: 1.075

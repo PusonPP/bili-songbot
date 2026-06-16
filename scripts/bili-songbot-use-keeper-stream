@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+LOCK=/run/bili-songbot-use-keeper-stream.lock
+STREAM_ENV=/opt/bili-live-keeper/runtime/stream.env
+SONGBOT_ENV=/srv/bili-songbot/config/.env
+SONGBOT_SERVICE=bili-songbot.service
+MAX_AGE_SECONDS="${MAX_STREAM_ENV_AGE_SECONDS:-1800}"
+
+exec 9>"$LOCK"
+flock -n 9 || exit 0
+
+if [[ ! -f "$STREAM_ENV" ]]; then
+  echo "stream env not found: $STREAM_ENV" >&2
+  exit 1
+fi
+
+now="$(date +%s)"
+mtime="$(stat -c %Y "$STREAM_ENV")"
+age="$((now - mtime))"
+
+if [[ "$age" -gt "$MAX_AGE_SECONDS" ]]; then
+  echo "stream env too old: ${age}s > ${MAX_AGE_SECONDS}s; refusing to use stale RTMP key" >&2
+  exit 0
+fi
+
+set -a
+# shellcheck disable=SC1090
+source "$STREAM_ENV"
+set +a
+
+if [[ -z "${BILI_RTMP_URL:-}" || -z "${BILI_STREAM_KEY:-}" ]]; then
+  echo "BILI_RTMP_URL or BILI_STREAM_KEY missing in $STREAM_ENV" >&2
+  exit 1
+fi
+
+if [[ ! -f "$SONGBOT_ENV" ]]; then
+  echo "songbot env not found: $SONGBOT_ENV" >&2
+  exit 1
+fi
+
+python3 - "$SONGBOT_ENV" "$BILI_RTMP_URL" "$BILI_STREAM_KEY" <<'PY'
+from pathlib import Path
+import sys
+
+env_path = Path(sys.argv[1])
+rtmp_url = sys.argv[2].strip()
+stream_key = sys.argv[3].strip()
+
+if not rtmp_url.startswith("rtmp://"):
+    raise SystemExit("invalid RTMP URL")
+
+if not stream_key:
+    raise SystemExit("empty stream key")
+
+lines = env_path.read_text("utf-8").splitlines()
+updates = {
+    "OUTPUT_MODE": "rtmp",
+    "RTMP_URL": rtmp_url.rstrip("/"),
+    "RTMP_STREAM_KEY": stream_key,
+}
+
+seen = set()
+out = []
+
+for line in lines:
+    if "=" not in line or line.lstrip().startswith("#"):
+        out.append(line)
+        continue
+    key = line.split("=", 1)[0].strip()
+    if key in updates:
+        out.append(f"{key}={updates[key]}")
+        seen.add(key)
+    else:
+        out.append(line)
+
+for key, value in updates.items():
+    if key not in seen:
+        out.append(f"{key}={value}")
+
+tmp = env_path.with_suffix(".env.tmp")
+tmp.write_text("\n".join(out) + "\n", "utf-8")
+tmp.replace(env_path)
+PY
+
+chmod 600 "$SONGBOT_ENV"
+chown root:root "$SONGBOT_ENV"
+
+rm -f /srv/bili-songbot/runtime/live.ts.fifo
+
+systemctl reset-failed "$SONGBOT_SERVICE" || true
+systemctl restart "$SONGBOT_SERVICE"
+
+echo "songbot restarted with new Bilibili stream env at $(date -Is)"

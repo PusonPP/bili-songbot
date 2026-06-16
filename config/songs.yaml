@@ -1,0 +1,1085 @@
+songs:
+- song_id: song_001
+  display_name: 50又4之遗失物
+  file_path: media/source/songs/50と4つの忘れ物.mp4
+  aliases:
+  - '01'
+  - '001'
+  - 50と4つの忘れ物
+  - 50又4
+  - 50与4个遗忘之物
+  - 50と4
+  - 50と4つ
+  - 50to4tsu no wasuremono
+  - 纯子成名曲
+  - 纯子solo
+  - フランシュシュ4号
+  duration: 228.2
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：50と4つの忘れ物；中文译名：50又4之遗失物；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_001_720p30.mp4
+  preprocessed_file_path: media/normalized/song_001_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_002
+  display_name: Beginning
+  file_path: media/source/songs/Beginning.mp4
+  aliases:
+  - '02'
+  - '002'
+  - 开端
+  - ビギニング
+  - 爱中心曲
+  - 水野爱C位曲
+  duration: 222.6
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：Beginning；中文译名：Beginning；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_002_720p30.mp4
+  preprocessed_file_path: media/normalized/song_002_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_003
+  display_name: DEAD or RAP!!!
+  file_path: media/source/songs/DEAD or RAP.mp4
+  aliases:
+  - '03'
+  - '003'
+  - デッドオアラップ
+  - 第2话Rap
+  - Rap对决
+  - Green Face
+  - グリーンフェイス
+  duration: 144.52
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：DEAD or RAP!!!；中文译名：DEAD or RAP!!!；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_003_720p30.mp4
+  preprocessed_file_path: media/normalized/song_003_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_004
+  display_name: 让FLAG迎风飘扬吧
+  file_path: media/source/songs/FLAGをはためかせろ!.mp4
+  aliases:
+  - '04'
+  - '004'
+  - FLAGをはためかせろ!
+  - FLAG
+  - 让旗帜飘扬吧
+  - 让Flag迎风飘扬
+  - FLAGを
+  - Flag o Hatemekasero
+  duration: 275.68
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：FLAGをはためかせろ!；中文译名：让FLAG迎风飘扬吧；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_004_720p30.mp4
+  preprocessed_file_path: media/normalized/song_004_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_005
+  display_name: 永无止境的佐贺
+  file_path: media/source/songs/Never ending saga.mp4
+  aliases:
+  - '05'
+  - '005'
+  - Never ending saga
+  - 永不终结的佐贺
+  - 永无止境SAGA
+  - Never ending
+  - ネバーエンディングサガ
+  - 巽幸太郎角色歌
+  - 幸太郎曲
+  duration: 250.48
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：Never ending saga；中文译名：永无止境的佐贺；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_005_720p30.mp4
+  preprocessed_file_path: media/normalized/song_005_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_006
+  display_name: Nope!!!!!
+  file_path: media/source/songs/Nope!!!!!.mp4
+  aliases:
+  - '06'
+  - '006'
+  - ノープ
+  - 2019年アイアンフリル
+  - 诗织中心曲
+  duration: 238.88
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：Nope!!!!!；中文译名：Nope!!!!!；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_006_720p30.mp4
+  preprocessed_file_path: media/normalized/song_006_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_007
+  display_name: REVENGE
+  file_path: media/source/songs/REVENGE.mp4
+  aliases:
+  - '07'
+  - '007'
+  - 复仇
+  - リベンジ
+  - Revenge主题曲之一
+  - 二期象征曲
+  duration: 270.64
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：REVENGE；中文译名：REVENGE；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_007_720p30.mp4
+  preprocessed_file_path: media/normalized/song_007_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_008
+  display_name: 致我最亲爱的人
+  file_path: media/source/songs/To my Dearest.mp4
+  aliases:
+  - 08
+  - 008
+  - To my Dearest
+  - 致最亲爱的你
+  - 致亲爱的你
+  - Lily回曲
+  - 莉莉回
+  - 一期第8话ED
+  duration: 303.32
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：To my Dearest；中文译名：致我最亲爱的人；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_008_720p30.mp4
+  preprocessed_file_path: media/normalized/song_008_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_009
+  display_name: 我们是法兰秀秀！
+  file_path: media/source/songs/We are FranChuChu!.mp4
+  aliases:
+  - 09
+  - 009
+  - We are FranChouChou!
+  - We are FranChuChu!
+  - 我们是フランシュシュ
+  - 我们是FranChouChou
+  - 法兰秀秀自我介绍歌
+  - 成员介绍歌
+  duration: 415.12
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：We are FranChouChou!；中文译名：我们是法兰秀秀！；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_009_720p30.mp4
+  preprocessed_file_path: media/normalized/song_009_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_010
+  display_name: ゾンビランドDEMPA!!
+  file_path: media/source/songs/Zombie Land Dempa!!.mp4
+  aliases:
+  - '10'
+  - '010'
+  - Zombie Land Dempa!!
+  - 僵尸之地DEMPA!!
+  - ゾンビランドデンパ
+  - 电波组联动曲
+  - でんぱ組.inc联动
+  duration: 316.32
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：ゾンビランドDEMPA!!；中文译名：僵尸之地DEMPA!!；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_010_720p30.mp4
+  preprocessed_file_path: media/normalized/song_010_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_011
+  display_name: FANTASTIC LOVERS
+  file_path: media/source/songs/アイアンフリル - FANTASTIC LOVERS.mp4
+  aliases:
+  - '11'
+  - '011'
+  - アイアンフリル - FANTASTIC LOVERS
+  - ファンタスティックラバーズ
+  - 旧アイアンフリル
+  - 水野爱生前组合曲
+  - Iron Frill出道画面曲
+  duration: 250.44
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：FANTASTIC LOVERS；中文译名：FANTASTIC LOVERS；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_011_720p30.mp4
+  preprocessed_file_path: media/normalized/song_011_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_012
+  display_name: 热血沸腾吧
+  file_path: media/source/songs/アツクナレ.mp4
+  aliases:
+  - '12'
+  - '012'
+  - アツクナレ
+  - 热起来吧
+  - 热くなれ
+  - Atsuku Nare
+  - アツくなれ
+  - 纯爱回
+  - 水野爱与绀野纯子回
+  duration: 285.92
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：アツクナレ；中文译名：热血沸腾吧；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_012_720p30.mp4
+  preprocessed_file_path: media/normalized/song_012_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_013
+  display_name: 鱿鱼之魂不会白费
+  file_path: media/source/songs/イカの魂無駄にはしない～小島食品工場株式会社社歌～.mp4
+  aliases:
+  - '13'
+  - '013'
+  - イカの魂無駄にはしない～小島食品工場株式会社社歌～
+  - 鱿鱼之魂不会没用～小岛食品工厂株式会社社歌～
+  - 鱿鱼社歌
+  - 小岛食品工厂社歌
+  - イカの魂
+  - 小島食品工場社歌
+  - Ika no Tamashii Muda ni wa Shinai
+  - 佐贺鱿鱼曲
+  duration: 95.2
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：イカの魂無駄にはしない～小島食品工場株式会社社歌～；中文译名：鱿鱼之魂不会没用～小岛食品工厂株式会社社歌～；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_013_720p30.mp4
+  preprocessed_file_path: media/normalized/song_013_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_014
+  display_name: 喜欢！唐津啾
+  file_path: media/source/songs/すきっちゃん！からチュッ.mp4
+  aliases:
+  - '14'
+  - '014'
+  - すきっちゃん！からチュッ
+  - すきっちゃん
+  - からチュッ
+  - Sukicchan! Kara Chu
+  - 唐津曲
+  - 唐津市联动曲
+  - 唐津市コラボ曲
+  - フランシュシュ初电波曲
+  - 电波歌
+  duration: 216.16
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：すきっちゃん！からチュッ；中文译名：喜欢！唐津啾；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_014_720p30.mp4
+  preprocessed_file_path: media/normalized/song_014_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_015
+  display_name: Jellyfish
+  file_path: media/source/songs/ゼリーフィッシュ.mp4
+  aliases:
+  - '15'
+  - '015'
+  - ゼリーフィッシュ
+  - 水母
+  - ジェリーフィッシュ
+  - 现アイアンフリル曲
+  - 新Iron Frill曲
+  - 诗织曲
+  duration: 284.68
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：ゼリーフィッシュ；中文译名：Jellyfish；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_015_720p30.mp4
+  preprocessed_file_path: media/normalized/song_015_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_016
+  display_name: Drive-in 鸟（法兰秀秀ver.）
+  file_path: media/source/songs/ドライブイン鳥(フランシュシュver.).mp4
+  aliases:
+  - '16'
+  - '016'
+  - ドライブイン鳥(フランシュシュver.)
+  - Drivein鸡
+  - Drive-In Tori
+  - Drivein鸟
+  - 鸡店
+  - Dr鸡
+  - Dr鸟
+  - ドライブイン鳥
+  - ドライブイン鳥CM
+  - 佐贺本地广告歌
+  duration: 26.68
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：ドライブイン鳥(フランシュシュver.)；中文译名：Drivein鸡；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_016_720p30.mp4
+  preprocessed_file_path: media/normalized/song_016_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_017
+  display_name: 为你献上真心
+  file_path: media/source/songs/ぶっちゃけてフォーユー.mp4
+  aliases:
+  - '17'
+  - '017'
+  - ぶっちゃけてフォーユー
+  - Frankly, For You
+  - Butchakete for You
+  - ぶっちゃけて
+  - フォーユー
+  - 舞舞加入曲
+  - 楪舞々曲
+  - フランシュシュ7号
+  duration: 243.92
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：ぶっちゃけてフォーユー；中文译名：为你献上真心；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_017_720p30.mp4
+  preprocessed_file_path: media/normalized/song_017_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_018
+  display_name: 闪耀吧
+  file_path: media/source/songs/フランシュシュ - 輝いて.mp4
+  aliases:
+  - '18'
+  - 018
+  - 輝いて
+  - フランシュシュ - 輝いて
+  - 闪耀
+  - 光辉吧
+  - Kagayaite
+  - かがやいて
+  duration: 241.48
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：輝いて；中文译名：闪耀吧；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_018_720p30.mp4
+  preprocessed_file_path: media/normalized/song_018_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_019
+  display_name: 徒花招魂术
+  file_path: media/source/songs/フランシュシュ - 徒花ネクロマンシー.mp4
+  aliases:
+  - '19'
+  - 019
+  - 徒花ネクロマンシー
+  - フランシュシュ - 徒花ネクロマンシー
+  - 无果花招魂术
+  - 徒花
+  - 徒花NC
+  - 招魂术
+  - Adabana Necromancy
+  - アダバナネクロマンシー
+  - 一期OP
+  - 第一季OP
+  - ゾンビランドサガOP
+  duration: 248.8
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：徒花ネクロマンシー；中文译名：徒花招魂术；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_019_720p30.mp4
+  preprocessed_file_path: media/normalized/song_019_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_020
+  display_name: 憧憬闪烁的宇宙（天空）
+  file_path: media/source/songs/またたく宇宙（ソラ）に憧れて.mp4
+  aliases:
+  - '20'
+  - '020'
+  - またたく宇宙（ソラ）に憧れて
+  - またたく宇宙に憧れて
+  - またたくソラに憧れて
+  - 瞬く宇宙に憧れて
+  - Matataku Sora ni Akogarete
+  - Matataku Uchuu ni Akogarete
+  - 剧场版主题曲
+  duration: 301.36
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：またたく宇宙（ソラ）に憧れて；中文译名：憧憬闪烁的宇宙（天空）；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_020_720p30.mp4
+  preprocessed_file_path: media/normalized/song_020_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_021
+  display_name: 复苏吧
+  file_path: media/source/songs/ヨミガエレ.mp4
+  aliases:
+  - '21'
+  - '021'
+  - ヨミガエレ
+  - 苏醒吧
+  - 复活吧
+  - よみがえれ
+  - Yomigaere
+  - Arpino曲
+  duration: 287.6
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：ヨミガエレ；中文译名：复苏吧；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_021_720p30.mp4
+  preprocessed_file_path: media/normalized/song_021_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_022
+  display_name: Little Parappo
+  file_path: media/source/songs/リトルパラッポ.mp4
+  aliases:
+  - '22'
+  - '022'
+  - リトルパラッポ
+  - Ritoru Parappo
+  - 莉莉即兴曲
+  - Scatman风格曲
+  - フランシュシュ6号
+  duration: 91.76
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：リトルパラッポ；中文译名：Little Parappo；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_022_720p30.mp4
+  preprocessed_file_path: media/normalized/song_022_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_023
+  display_name: 激昂Survive（Complete Edition）
+  file_path: media/source/songs/激昂サバイブ Complete Edition.mp4
+  aliases:
+  - '23'
+  - '023'
+  - 激昂サバイブ（Complete Edition）
+  - 激昂Survive完全版
+  - 激昂
+  - 激昂サバイブ完全版
+  - Gekkou Survive Complete Edition
+  - Gekkō Survive
+  duration: 252.24
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：激昂サバイブ（Complete Edition）；中文译名：激昂Survive（Complete Edition）；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_023_720p30.mp4
+  preprocessed_file_path: media/normalized/song_023_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_024
+  display_name: 走向光明
+  file_path: media/source/songs/光へ.mp4
+  aliases:
+  - '24'
+  - '024'
+  - 光へ
+  - 向光芒
+  - 向着光
+  - Hikari e
+  - Hikari he
+  - ひかりへ
+  - 一期ED
+  - 第一季ED
+  - ゾンビランドサガED
+  duration: 215.4
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：光へ；中文译名：走向光明；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_024_720p30.mp4
+  preprocessed_file_path: media/normalized/song_024_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_025
+  display_name: 感谢现在与未来
+  file_path: media/source/songs/今を未来をありがとう.mp4
+  aliases:
+  - '25'
+  - '025'
+  - 今を未来をありがとう
+  - 谢谢现在与未来
+  - 谢谢你 现在与未来
+  - 今を未来を
+  - Ima o Mirai o Arigatou
+  - Ima wo Mirai wo Arigatou
+  duration: 303.12
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：今を未来をありがとう；中文译名：感谢现在与未来；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_025_720p30.mp4
+  preprocessed_file_path: media/normalized/song_025_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_026
+  display_name: 若今日能载入史册
+  file_path: media/source/songs/今日が歴史に残るなら.mp4
+  aliases:
+  - '26'
+  - '026'
+  - 今日が歴史に残るなら
+  - 今天若能留在历史中
+  - 今日が歴史
+  - Kyou ga Rekishi ni Nokoru nara
+  - Kyō ga Rekishi ni Nokoru nara
+  duration: 244.2
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：今日が歴史に残るなら；中文译名：若今日能载入史册；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_026_720p30.mp4
+  preprocessed_file_path: media/normalized/song_026_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_027
+  display_name: 今天是咖喱耶耶耶
+  file_path: media/source/songs/今日はカレーだイェイイェイイェイ.mp4
+  aliases:
+  - '27'
+  - '027'
+  - 今日はカレーだイェイイェイイェイ
+  - 今天吃咖喱耶耶耶
+  - 咖喱歌
+  - カレーだ
+  - Kyou wa Curry da Yay Yay Yay
+  - Kyō wa Curry da Yei Yei Yei
+  - 男の子マンションズ
+  - 儿童节目曲
+  - 咖喱
+  duration: 47.08
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：今日はカレーだイェイイェイイェイ；中文译名：今天是咖喱耶耶耶；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_027_720p30.mp4
+  preprocessed_file_path: media/normalized/song_027_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_028
+  display_name: 佐贺事变
+  file_path: media/source/songs/佐賀事変-フランシュシュ.mp4
+  aliases:
+  - '28'
+  - 028
+  - 佐賀事変
+  - 佐賀事変-フランシュシュ
+  - Saga Jihen
+  - Saga Incident
+  - 佐贺事变MV
+  - ゆうぎり中心曲
+  - 夕雾中心曲
+  - 昭和歌谣风
+  duration: 244.08
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：佐賀事変；中文译名：佐贺事变；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_028_720p30.mp4
+  preprocessed_file_path: media/normalized/song_028_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_029
+  display_name: 七福大祭典
+  file_path: media/source/songs/七福大祭典.mp4
+  aliases:
+  - '29'
+  - 029
+  - 七福
+  - 七福祭典
+  - 七福大祭り
+  - Shichifuku Daisaiten
+  - ぱちんこ曲
+  - Pゾンビランドサガ曲
+  - Sammy联动曲
+  duration: 229.36
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：七福大祭典；中文译名：七福大祭典；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_029_720p30.mp4
+  preprocessed_file_path: media/normalized/song_029_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_030
+  display_name: 宣誓！活着的感觉
+  file_path: media/source/songs/宣誓！ALIVE センセーション.mp4
+  aliases:
+  - '30'
+  - '030'
+  - 宣誓！ALIVE センセーション
+  - ALIVE センセーション
+  - Sensei! Alive Sensation
+  - 源樱solo
+  - 源さくらsolo
+  - 源樱角色歌
+  duration: 315.76
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：宣誓！ALIVE センセーション；中文译名：宣誓！活着的感觉；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_030_720p30.mp4
+  preprocessed_file_path: media/normalized/song_030_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_031
+  display_name: 大河啊一同哭泣吧
+  file_path: media/source/songs/大河よ共に泣いてくれ.mp4
+  aliases:
+  - '31'
+  - '031'
+  - 大河よ共に泣いてくれ
+  - 大河
+  - 大河啊
+  - 大河よ
+  - 大河啊陪我一同哭泣吧
+  - Taiga yo Tomo ni Naitekure
+  - 第二季OP
+  - 二期OP
+  - Revenge OP
+  - ゾンビランドサガ リベンジOP
+  duration: 212.16
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：大河よ共に泣いてくれ；中文译名：大河啊一同哭泣吧；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_031_720p30.mp4
+  preprocessed_file_path: media/normalized/song_031_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_032
+  display_name: 顺风旅人
+  file_path: media/source/songs/追い風トラベラーズ.mp4
+  aliases:
+  - '32'
+  - '032'
+  - 追い風トラベラーズ
+  - 顺风旅行者
+  - 追风旅人
+  - 追い風
+  - Oikaze Travelers
+  - Oikaze Travellers
+  - 二期最终话插曲
+  - Revenge最终话曲
+  - EFS演唱会曲
+  duration: 241.04
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：追い風トラベラーズ；中文译名：顺风旅人；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_032_720p30.mp4
+  preprocessed_file_path: media/normalized/song_032_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_033
+  display_name: 特攻DANCE ～DAWN OF THE BAD～
+  file_path: media/source/songs/特攻DANCE ~DAWN OF THE BAD~.mp4
+  aliases:
+  - '33'
+  - '033'
+  - 特攻DANCE
+  - 特攻舞
+  - Tokkou Dance
+  - Tokko Dance
+  - DAWN OF THE BAD
+  - 暴走族回曲
+  - 二阶堂咲回
+  - サキ回
+  duration: 252.64
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：特攻DANCE ～DAWN OF THE BAD～；中文译名：特攻DANCE ～DAWN OF THE BAD～；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_033_720p30.mp4
+  preprocessed_file_path: media/normalized/song_033_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_034
+  display_name: 讨厌风大的日子吗？（FranChouChou cover）
+  file_path: media/source/songs/風の強い日は嫌いか？ FranChouChou cover.mp4
+  aliases:
+  - '34'
+  - '034'
+  - 風の強い日は嫌いか？ FranChouChou cover
+  - 讨厌风大的日子吗 法兰秀秀版
+  - 风强日cover
+  - Kaze no Tsuyoi Hi wa Kirai ka? FranChouChou cover
+  - フランシュシュcover
+  - 白龙曲翻唱
+  duration: 216.96
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：風の強い日は嫌いか？ FranChouChou cover；中文译名：讨厌风大的日子吗？ FranChouChou cover；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_034_720p30.mp4
+  preprocessed_file_path: media/normalized/song_034_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_035
+  display_name: 讨厌风大的日子吗？
+  file_path: media/source/songs/風の強い日は嫌いか？.mp4
+  aliases:
+  - '35'
+  - '035'
+  - 風の強い日は嫌いか？
+  - 风强日
+  - 风很大的日子讨厌吗
+  - Kaze no Tsuyoi Hi wa Kirai ka?
+  - 白龙曲
+  - ホワイト竜曲
+  - ホワイト竜
+  - 白竜
+  duration: 275.6
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：風の強い日は嫌いか？；中文译名：讨厌风大的日子吗？；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_035_720p30.mp4
+  preprocessed_file_path: media/normalized/song_035_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_036
+  display_name: 冒险Zundokodon
+  file_path: media/source/songs/冒険ズンドコドン!.mp4
+  aliases:
+  - '36'
+  - '036'
+  - 冒険ズンドコドン!
+  - 冒险吱咚咳咚
+  - Bōken Zundokodon
+  - Boken Zundokodon
+  duration: 189.16
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：冒険ズンドコドン!；中文译名：冒险吱咚咳咚；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_036_720p30.mp4
+  preprocessed_file_path: media/normalized/song_036_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_037
+  display_name: 将梦想掌握手中，漫步于没有归处的日子
+  file_path: media/source/songs/夢を手に、戻れる場所もない日々を.mp4
+  aliases:
+  - '37'
+  - '037'
+  - 夢を手に、戻れる場所もない日々を
+  - 梦を手に
+  - 夢を手に
+  - 抓住梦想
+  - 无法回头的日子
+  - Yume o Te ni, Modoreru Basho mo Nai Hibi o
+  - Yume wo Te ni Modoreru Basho mo Nai Hibi wo
+  - 第二季ED
+  - 二期ED
+  - Revenge ED
+  duration: 259.12
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：夢を手に、戻れる場所もない日々を；中文译名：将梦想掌握手中，漫步于没有归处的日子；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_037_720p30.mp4
+  preprocessed_file_path: media/normalized/song_037_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_038
+  display_name: 生命
+  file_path: media/source/songs/命.mp4
+  aliases:
+  - '38'
+  - 038
+  - 命
+  - 命（いのち）
+  - Inochi
+  - 生命之歌
+  - 大空ライト曲
+  - 大空光曲
+  duration: 103.0
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：命；中文译名：生命；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_038_720p30.mp4
+  preprocessed_file_path: media/normalized/song_038_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_039
+  display_name: 觉醒吧RETURNER（Electric Returner Type R）
+  file_path: media/source/songs/目覚めRETURNER (Electric Returner Type R).mp4
+  aliases:
+  - '39'
+  - 039
+  - 目覚めRETURNER (Electric Returner Type "R")
+  - 觉醒吧RETURNER Type R
+  - 目觉RETURNER Type R
+  - 目覚めRETURNER Type R
+  - Electric Returner Type R
+  - Mezame RETURNER Electric Returner Type R
+  - 爱3号Type R版
+  duration: 260.76
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：目覚めRETURNER (Electric Returner Type "R")；中文译名：觉醒吧RETURNER（Electric Returner
+    Type R）；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_039_720p30.mp4
+  preprocessed_file_path: media/normalized/song_039_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_040
+  display_name: 觉醒吧RETURNER（Electric Returner）
+  file_path: media/source/songs/目覚めRETURNER(Electric Returner).mp4
+  aliases:
+  - '40'
+  - '040'
+  - 目覚めRETURNER (Electric Returner)
+  - 觉醒吧RETURNER电音版
+  - 目觉RETURNER电音版
+  - Electric Returner
+  - Mezame RETURNER Electric Returner
+  - 电音版
+  - 爱电音版
+  duration: 259.12
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：目覚めRETURNER (Electric Returner)；中文译名：觉醒吧RETURNER（Electric Returner）；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_040_720p30.mp4
+  preprocessed_file_path: media/normalized/song_040_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_041
+  display_name: 觉醒吧RETURNER
+  file_path: media/source/songs/目覚めRETURNER.mp4
+  aliases:
+  - '41'
+  - '041'
+  - 目覚めRETURNER
+  - 目觉RETURNER
+  - 目覚めリターナー
+  - Mezame RETURNER
+  - RETURNER
+  - 法兰秀秀第一首偶像曲
+  duration: 261.36
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：目覚めRETURNER；中文译名：觉醒吧RETURNER；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_041_720p30.mp4
+  preprocessed_file_path: media/normalized/song_041_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075
+- song_id: song_042
+  display_name: 悠久Never Die
+  file_path: media/source/songs/悠久ネバーダイ.mp4
+  aliases:
+  - '42'
+  - '042'
+  - 悠久ネバーダイ
+  - 悠久不死
+  - 悠久ネバダイ
+  - Yuukyuu Never Die
+  - Yūkyū Never Die
+  duration: 291.64
+  weight: 1.0
+  enabled: true
+  tags:
+  - zombieland_saga
+  notes: 日文原名：悠久ネバーダイ；中文译名：悠久Never Die；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
+  normalized_file_path: media/normalized/song_042_720p30.mp4
+  preprocessed_file_path: media/normalized/song_042_720p30.mp4
+  transition_policy:
+    enabled: true
+    mode: alpha_overlay
+    transition_asset: media/transition/transition_720p30_argb.mov
+    overlap_seconds: 1.075

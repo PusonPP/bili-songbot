@@ -1,0 +1,10 @@
+/srv/bili-songbot/logs/*.log /srv/bili-songbot/logs/*.err.log {
+    daily
+    rotate 14
+    compress
+    missingok
+    notifempty
+    copytruncate
+    maxsize 100M
+    su bili-songbot bili-songbot
+}

@@ -1,0 +1,10 @@
+fastapi>=0.111,<1.0
+uvicorn[standard]>=0.30,<1.0
+PyYAML>=6.0.1,<7.0
+Pillow>=10.3,<12.0
+rapidfuzz>=3.9,<4.0
+python-dotenv>=1.0,<2.0
+psutil>=5.9,<8.0
+aiohttp>=3.9,<4.0
+# blivedm 的 PyPI 包可能不是最新，生产环境推荐按 README 用 GitHub master 安装：
+# pip install "git+https://github.com/xfgryujk/blivedm.git@master"

@@ -1,0 +1,30 @@
+[Unit]
+Description=Bilibili Live Keeper
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/bili-live-keeper
+EnvironmentFile=/opt/bili-live-keeper/.env
+Environment=HOME=/var/lib/bili-live-keeper
+Environment=XDG_CACHE_HOME=/var/lib/bili-live-keeper/.cache
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONUNBUFFERED=1
+Environment=DISPLAY=
+Environment=XAUTHORITY=
+ExecStart=/opt/bili-live-keeper/.venv/bin/python -m bili_live_keeper.cli daemon
+Restart=always
+RestartSec=10
+User=bili-live-keeper
+Group=bili-live-keeper
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/bili-live-keeper /var/log/bili-live-keeper /opt/bili-live-keeper/runtime /opt/bili-live-keeper/logs
+CapabilityBoundingSet=
+LockPersonality=true
+
+[Install]
+WantedBy=multi-user.target
