@@ -43,7 +43,7 @@ ui:
   output_path: runtime/ui_overlay.png
   show_random_preview: 3
   show_request_queue: 6
-  right_top_notice: "部分歌词翻译及时轴仅供参考，目前正在升级优化中，提供帮助或反馈意见请加QQ群：801136573"
+  right_top_notice: "＊当前正在举办 【佐贺偶像是传奇梦幻银河祭】二创庆典\n部分歌词翻译及时轴仅供参考，目前正在升级优化中，提供帮助或反馈意见请加QQ群：801136573"
 
 output:
   mode: local            # local | rtmp

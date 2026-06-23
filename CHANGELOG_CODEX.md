@@ -1,5 +1,15 @@
 # CHANGELOG_CODEX.md
 
+## 2026-06-23 11:00:08 UTC — Add festival notice to live overlay
+
+Added the current event notice to the live overlay right-top announcement:
+
+- `＊当前正在举办 【佐贺偶像是传奇梦幻银河祭】二创庆典`
+
+Also updated the fallback PNG overlay text wrapping helper to respect explicit newline breaks in notices.
+
+No services were restarted or stopped. No secrets were read or changed.
+
 ## 2026-06-16 15:10:51 UTC — Initial Git publication preparation
 
 Prepared the project for a first safe Git commit and GitHub push.

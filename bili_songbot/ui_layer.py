@@ -229,15 +229,16 @@ def _clip(text: str, max_chars: int) -> str:
 
 def _wrap_text(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.ImageFont, max_width: int) -> list[str]:
     lines: list[str] = []
-    buf = ""
-    for ch in text:
-        test = buf + ch
-        bbox = draw.textbbox((0, 0), test, font=font)
-        if bbox[2] - bbox[0] > max_width and buf:
+    for raw_line in str(text or "").splitlines() or [""]:
+        buf = ""
+        for ch in raw_line:
+            test = buf + ch
+            bbox = draw.textbbox((0, 0), test, font=font)
+            if bbox[2] - bbox[0] > max_width and buf:
+                lines.append(buf)
+                buf = ch
+            else:
+                buf = test
+        if buf:
             lines.append(buf)
-            buf = ch
-        else:
-            buf = test
-    if buf:
-        lines.append(buf)
     return lines

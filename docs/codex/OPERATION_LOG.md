@@ -1,5 +1,20 @@
 # OPERATION_LOG.md
 
+## 2026-06-23 11:00:08 UTC
+
+Added a festival notice to the live overlay announcement text.
+
+Actions:
+
+- Updated `config/app.yaml` so `ui.right_top_notice` starts with `＊当前正在举办 【佐贺偶像是传奇梦幻银河祭】二创庆典`.
+- Updated `bili_songbot/ui_layer.py` so fallback PNG notice wrapping respects explicit newline breaks.
+
+Safety:
+
+- Did not read or edit real `.env`, `stream.env`, cookies, or tokens.
+- Did not restart or stop any service.
+- Did not expose RTMP stream keys or full push URLs.
+
 ## 2026-06-16 15:10:51 UTC
 
 Prepared `/srv/bili-songbot` for initial Git publication to `PusonPP/bili-songbot.git`.
