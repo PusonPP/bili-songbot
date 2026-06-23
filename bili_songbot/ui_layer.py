@@ -7,6 +7,7 @@ from typing import Any
 import unicodedata
 
 from PIL import Image, ImageDraw, ImageFont
+import yaml
 
 from .config import AppConfig
 from .models import Song
@@ -102,7 +103,7 @@ class UiLayerGenerator:
                 y += 32
 
         # 右上角提示。为了不压歌词，字号较小，右对齐。
-        notice = self.cfg.ui.right_top_notice
+        notice = self._notice_text()
         margin = int(w * 0.02)
         max_notice_w = int(w * 0.56)
         lines = _wrap_text(draw, notice, notice_font, max_notice_w)
@@ -153,13 +154,14 @@ class UiLayerGenerator:
         ]
         preview_text = "\n".join(preview_lines) if preview_lines else "暂无预告"
 
+        notice = self._notice_text()
         base = self.output_path.with_suffix("")
         files = {
             "current": _clip(current_name, 24),
             "hint": "可输入歌曲关键词进行点歌\n同一用户一分钟内只支持一次",
             "queue": queue_text,
             "preview": preview_text,
-            "notice": str(self.cfg.ui.right_top_notice),
+            "notice": notice,
         }
 
         for name, text in files.items():
@@ -189,8 +191,19 @@ class UiLayerGenerator:
         panel_tmp.replace(self.panel_text_path)
 
         notice_tmp = self.notice_text_path.with_suffix(".notice.tmp.txt")
-        notice_tmp.write_text(str(self.cfg.ui.right_top_notice), encoding="utf-8")
+        notice_tmp.write_text(notice, encoding="utf-8")
         notice_tmp.replace(self.notice_text_path)
+
+    def _notice_text(self) -> str:
+        """Read the notice from app.yaml so small text updates do not require a restart."""
+        try:
+            raw = yaml.safe_load(self.cfg.app_config.read_text(encoding="utf-8")) or {}
+            notice = (raw.get("ui") or {}).get("right_top_notice")
+            if notice is not None:
+                return str(notice)
+        except Exception:  # noqa: BLE001
+            logger.warning("读取公告配置失败，使用启动时配置：%s", self.cfg.app_config, exc_info=True)
+        return str(self.cfg.ui.right_top_notice)
 
 
 def _display_width(ch: str) -> int:

@@ -1,5 +1,22 @@
 # CHANGELOG_CODEX.md
 
+## 2026-06-23 11:23:34 UTC — Make overlay notice updates reload from config
+
+Fixed the festival notice not appearing on the current stream.
+
+Root cause:
+
+- The running `bili-songbot.service` process had loaded `config/app.yaml` before the festival notice was added.
+- `runtime/ui_overlay.notice.txt` still contained the old notice, and the running process could overwrite manual edits during later UI refreshes.
+
+Changes:
+
+- Refreshed `runtime/ui_overlay.notice.txt` with the festival notice for the currently running FFmpeg overlay.
+- Updated `bili_songbot/ui_layer.py` so notice text is read from `config/app.yaml` each time the overlay runtime text files are written.
+- Restarted `bili-songbot.service` to load the new overlay notice behavior into the currently running stream.
+
+No secrets were read or changed.
+
 ## 2026-06-23 11:00:08 UTC — Add festival notice to live overlay
 
 Added the current event notice to the live overlay right-top announcement:
