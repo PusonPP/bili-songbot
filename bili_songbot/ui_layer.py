@@ -154,14 +154,16 @@ class UiLayerGenerator:
         ]
         preview_text = "\n".join(preview_lines) if preview_lines else "暂无预告"
 
-        notice = self._notice_text()
+        notice_lines = self._notice_lines()
         base = self.output_path.with_suffix("")
         files = {
             "current": _clip(current_name, 24),
             "hint": "可输入歌曲关键词进行点歌\n同一用户一分钟内只支持一次",
             "queue": queue_text,
             "preview": preview_text,
-            "notice": notice,
+            "notice": "\n".join(notice_lines),
+            "notice.0": notice_lines[0],
+            "notice.1": notice_lines[1],
         }
 
         for name, text in files.items():
@@ -191,7 +193,7 @@ class UiLayerGenerator:
         panel_tmp.replace(self.panel_text_path)
 
         notice_tmp = self.notice_text_path.with_suffix(".notice.tmp.txt")
-        notice_tmp.write_text(notice, encoding="utf-8")
+        notice_tmp.write_text("\n".join(notice_lines), encoding="utf-8")
         notice_tmp.replace(self.notice_text_path)
 
     def _notice_text(self) -> str:
@@ -204,6 +206,14 @@ class UiLayerGenerator:
         except Exception:  # noqa: BLE001
             logger.warning("读取公告配置失败，使用启动时配置：%s", self.cfg.app_config, exc_info=True)
         return str(self.cfg.ui.right_top_notice)
+
+    def _notice_lines(self) -> list[str]:
+        lines = [line.strip() for line in self._notice_text().splitlines() if line.strip()]
+        if not lines:
+            return ["", ""]
+        if len(lines) == 1:
+            return [lines[0], ""]
+        return lines[:2]
 
 
 def _display_width(ch: str) -> int:

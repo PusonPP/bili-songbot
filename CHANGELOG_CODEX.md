@@ -1,5 +1,18 @@
 # CHANGELOG_CODEX.md
 
+## 2026-06-23 11:30:35 UTC — Alternate right-top overlay notices
+
+Changed the right-top live overlay notice from a stacked two-line block to a two-item rotation.
+
+Details:
+
+- Wrote the first two notice lines to separate runtime text files.
+- Updated the FFmpeg overlay filter to alternate them every 30 seconds.
+- Added a 1.5 second crossfade at each switch so the next notice fades in while the previous one fades out.
+- Restarted `bili-songbot.service` and verified the new FFmpeg overlay filter, health endpoint, split notice files, and RTMP connection.
+
+This keeps the notice from covering song title text near the top of the video.
+
 ## 2026-06-23 11:23:34 UTC — Make overlay notice updates reload from config
 
 Fixed the festival notice not appearing on the current stream.

@@ -1,5 +1,21 @@
 # OPERATION_LOG.md
 
+## 2026-06-23 11:30:35 UTC
+
+Adjusted the right-top overlay notice to avoid covering the song title.
+
+Actions:
+
+- Updated `bili_songbot/ui_layer.py` to split the configured notice into two runtime files: `ui_overlay.notice.0.txt` and `ui_overlay.notice.1.txt`.
+- Updated `bili_songbot/pusher.py` so FFmpeg alternates the two notice files every 30 seconds.
+- Added 1.5 second crossfade alpha expressions at each switch.
+
+Safety:
+
+- Did not read or edit real `.env`, `stream.env`, cookies, or tokens.
+- Restarted only `bili-songbot.service` after validation so the new FFmpeg overlay filter is loaded.
+- Verified health endpoint, split notice files, active services, and masked RTMP connection after restart.
+
 ## 2026-06-23 11:23:34 UTC
 
 Investigated why the festival notice was not visible in the live picture.

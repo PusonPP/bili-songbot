@@ -61,6 +61,8 @@ class StreamPusher:
             "queue": base.with_name(base.name + ".queue.txt"),
             "preview": base.with_name(base.name + ".preview.txt"),
             "notice": base.with_name(base.name + ".notice.txt"),
+            "notice_0": base.with_name(base.name + ".notice.0.txt"),
+            "notice_1": base.with_name(base.name + ".notice.1.txt"),
         }
 
     def _video_filter(self) -> str:
@@ -113,7 +115,10 @@ class StreamPusher:
         hint_arg = _ffescape(paths["hint"])
         queue_arg = _ffescape(paths["queue"])
         preview_arg = _ffescape(paths["preview"])
-        notice_arg = _ffescape(paths["notice"])
+        notice_0_arg = _ffescape(paths["notice_0"])
+        notice_1_arg = _ffescape(paths["notice_1"])
+        notice_alpha_0 = r"if(lt(mod(t\,60)\,28.5)\,1\,if(lt(mod(t\,60)\,30)\,(30-mod(t\,60))/1.5\,if(lt(mod(t\,60)\,58.5)\,0\,(mod(t\,60)-58.5)/1.5)))"
+        notice_alpha_1 = r"if(lt(mod(t\,60)\,28.5)\,0\,if(lt(mod(t\,60)\,30)\,(mod(t\,60)-28.5)/1.5\,if(lt(mod(t\,60)\,58.5)\,1\,(60-mod(t\,60))/1.5)))"
 
         base = (
             f"[0:v]scale={w}:{h}:force_original_aspect_ratio=decrease,"
@@ -148,8 +153,10 @@ class StreamPusher:
             f"drawtext=fontfile={font_arg}:textfile={hint_arg}:reload=1:x={x+px(12)}:y={y_hint}:fontsize={fs_body}:fontcolor=white@0.84:line_spacing={py(10)}:borderw=1:bordercolor=black@0.70",
             f"drawtext=fontfile={font_arg}:textfile={queue_arg}:reload=1:x={x+px(12)}:y={y_queue}:fontsize={fs_queue}:fontcolor=white@0.88:line_spacing={py(9)}:borderw=1:bordercolor=black@0.70",
             f"drawtext=fontfile={font_arg}:textfile={preview_arg}:reload=1:x={x+px(12)}:y={y_preview}:fontsize={fs_preview}:fontcolor=white@0.84:line_spacing={py(8)}:borderw=1:bordercolor=black@0.70",
-            # Right top notice.
-            f"drawtext=fontfile={font_arg}:textfile={notice_arg}:reload=1:x=w-tw-{notice_margin}:y={notice_y}:fontsize={fs_notice}:fontcolor=white@0.92:line_spacing={py(6)}:borderw=1:bordercolor=black@0.70",
+            # Right top notices alternate every 30s with a 1.5s crossfade so
+            # they do not stack over song-title text.
+            f"drawtext=fontfile={font_arg}:textfile={notice_0_arg}:reload=1:x=w-tw-{notice_margin}:y={notice_y}:fontsize={fs_notice}:fontcolor=white@0.92:borderw=1:bordercolor=black@0.70:alpha='{notice_alpha_0}'",
+            f"drawtext=fontfile={font_arg}:textfile={notice_1_arg}:reload=1:x=w-tw-{notice_margin}:y={notice_y}:fontsize={fs_notice}:fontcolor=white@0.92:borderw=1:bordercolor=black@0.70:alpha='{notice_alpha_1}'",
         ]
 
         return base + "," + ",".join(shapes + texts) + "[v]"
