@@ -147,6 +147,7 @@ class BiliLiveBrowser:
 
     def ensure_live_area(self, parent: str, child: str) -> bool:
         self._require_page()
+        self._dismiss_transient_dialog()
         if self._wait_until(lambda: self._has_current_target_area(parent, child), timeout_seconds=8):
             LOGGER.info("Live area already appears to be %s / %s", parent, child)
             return True
@@ -309,6 +310,20 @@ class BiliLiveBrowser:
                 return ""
 
     def _dismiss_transient_dialog(self) -> None:
+        try:
+            close_controls = self.page.locator(
+                ".link-popup-ctnr button.close-btn, .link-popup-ctnr div.close-btn"
+            )
+            for index in range(min(close_controls.count(), 10)):
+                candidate = close_controls.nth(index)
+                if not candidate.is_visible(timeout=500):
+                    continue
+                candidate.click(timeout=3000)
+                LOGGER.info("Dismissed transient live-dashboard popup")
+                time.sleep(0.3)
+                break
+        except Exception:
+            pass
         try:
             self.page.keyboard.press("Escape", timeout=1000)
             time.sleep(0.3)

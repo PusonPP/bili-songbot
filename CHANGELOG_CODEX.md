@@ -1,5 +1,26 @@
 # CHANGELOG_CODEX.md
 
+## 2026-07-24 05:06:40 UTC — Recover live startup from dashboard popup
+
+Fixed the paired live-keeper workflow after a new Bilibili dashboard popup blocked
+the live-area selector.
+
+Details:
+
+- Confirmed the songbot stopped after Bilibili closed the RTMP connection with a
+  `Broken pipe`.
+- Identified the full-screen “cover ratio changed to 4:3” popup as the element
+  intercepting clicks on “请选择直播分区”.
+- Updated live-keeper to dismiss visible dashboard popup close controls before
+  selecting the configured live area.
+- Mirrored the sanitized live-keeper source change under `paired/live-keeper/`.
+- Restarted only `bili-live-keeper.service`; the existing path/service bridge
+  applied the fresh stream environment and started `bili-songbot.service`.
+- Verified Bilibili API `live=true`, songbot health `ok=true`, and an established
+  FFmpeg connection to RTMP port 1935.
+
+No RTMP key, cookie, token, full push URL, or runtime secret was recorded.
+
 ## 2026-06-23 11:30:35 UTC — Alternate right-top overlay notices
 
 Changed the right-top live overlay notice from a stacked two-line block to a two-item rotation.

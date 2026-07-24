@@ -1,5 +1,47 @@
 # OPERATION_LOG.md
 
+## 2026-07-24 05:06:40 UTC
+
+Investigated and recovered an interrupted Bilibili live session.
+
+Findings:
+
+- `bili-songbot.service` was inactive after FFmpeg received `Broken pipe`.
+- Bilibili reported the room offline.
+- `bili-live-keeper.service` repeatedly reached the live dashboard but could not
+  click the live-area selector.
+- Playwright trial-click diagnostics showed a new full-screen
+  `link-popup-ctnr` cover-ratio reminder intercepting pointer events.
+- Closing that popup made “请选择直播分区” immediately actionable.
+
+Actions:
+
+- Updated `/opt/bili-live-keeper/src/bili_live_keeper/browser.py` to dismiss
+  visible live-dashboard popups before selecting the live area.
+- Mirrored the sanitized source update to
+  `paired/live-keeper/src/bili_live_keeper/browser.py`.
+- Created timestamped backups before editing.
+- Restarted only `bili-live-keeper.service` to load the fix.
+- Observed the keeper close the popup, confirm `电台 / 聊天电台`, start the room,
+  and write a fresh `runtime/stream.env`.
+- Observed `bili-songbot-stream-sync.service` apply the new stream environment
+  and start `bili-songbot.service`.
+
+Verification:
+
+- Bilibili API reported `live=true` with high confidence.
+- `bili-live-keeper.service` and `bili-songbot.service` were active/running.
+- `bili-songbot-stream-sync.path` was active/waiting.
+- The songbot health endpoint returned `ok=true`, with danmaku and pusher active.
+- FFmpeg held an established connection to RTMP port 1935.
+- `bili-live-keeper-push.service` remained masked and inactive.
+
+Safety:
+
+- Kept `bili-live-keeper-push.service` masked and inactive.
+- Did not print or record RTMP keys, cookies, tokens, or full push URLs.
+- Restricted service recovery to the keeper and its existing stream-sync chain.
+
 ## 2026-06-23 11:30:35 UTC
 
 Adjusted the right-top overlay notice to avoid covering the song title.
