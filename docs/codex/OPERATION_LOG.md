@@ -1,5 +1,38 @@
 # OPERATION_LOG.md
 
+## 2026-09-14 CST - Recover stalled live-keeper
+
+The room was offline, songbot inactive, and no RTMP socket existed. Songbot logged
+RTMP Broken pipe at 2026-09-13 14:03:39 CST. Keeper was running but its browser
+startup repeatedly failed with the Playwright sync API / asyncio loop error.
+Disk-full errors also appeared; root had about 1.7 GiB available at inspection.
+Earlier logs were incomplete, so the first browser startup failure is unconfirmed.
+
+Reproduced an event-loop leak using an invalid Chromium executable, without
+loading account cookies or visiting Bilibili. A failed context-manager entry did
+not call close(), leaving the Playwright loop running and blocking future starts.
+Added exception cleanup in production browser.py and its paired source snapshot,
+plus regression tests. Backups use suffix `.bak.2026-09-14_025834`.
+Existing uncommitted August maintenance entries were preserved.
+
+Recovery and verification:
+
+- `systemctl restart bili-live-keeper.service` at 03:00:22 CST loaded the fix and
+  released the stuck process. No systemd unit files were changed.
+- After two offline confirmations, keeper opened the room and wrote fresh
+  stream.env at 03:01:52 CST. The path/bridge applied it and started songbot.
+- `python -m unittest discover -s paired/live-keeper/tests -v`: two tests passed.
+  Python compilation, production/snapshot comparison, and git diff checks passed.
+- Keeper API check returned live=true; healthz returned ok=true with connected
+  danmaku and a running pusher. FFmpeg RTMP was ESTAB with increasing bytes_acked.
+- Keeper and songbot were active/running; the sync path was active/waiting.
+  Songbot remained disabled for boot; the black/silent pusher stayed masked/inactive.
+- Root usage remained 99%, with about 1.7 GiB available. Read-only size checks
+  identified roughly 43 GiB in /var/lib/secure-cloud-drive and 19 GiB in
+  /var/lib/containerd. These are outside this repair and were not modified.
+- Log inspection was redacted; no credentials, full push URLs, runtime logs,
+  real environment files, or cookies were staged. No logs were truncated.
+
 ## 2026-07-24 05:06:40 UTC
 
 Investigated and recovered an interrupted Bilibili live session.

@@ -1,5 +1,25 @@
 # CHANGELOG_CODEX.md
 
+## 2026-09-14 CST - Release Playwright after failed browser startup
+
+- Confirmed songbot stopped after RTMP Broken pipe at 2026-09-13 14:03:39 CST.
+- Keeper reported the room offline but repeatedly failed with a running asyncio
+  loop error. Logs also contained disk-full errors; root usage was 99%.
+- Reproduced the loop leak with an invalid browser executable, without account
+  credentials or live-room actions.
+- Added cleanup when browser context entry fails, including partial startup,
+  and mirrored the production fix in the paired source snapshot.
+- Added regression checks for repeated real Playwright launch failures and
+  cleanup continuation when closing a disconnected context raises.
+- Both regressions, Python compilation, and whitespace checks passed.
+- Restarted keeper at 03:00:22 CST. At 03:01:52 CST it wrote a fresh stream
+  environment and the existing stream-sync bridge started songbot.
+- Verified API live=true, health ok=true, danmaku connected, and increasing RTMP
+  acknowledged bytes. The black/silent pusher remains masked and inactive.
+- Root filesystem remains 99% used, mainly by unrelated project/container data;
+  no unrelated data was deleted. Low disk space remains an operational risk.
+- No credentials, cookies, or complete push URLs were printed or staged.
+
 ## 2026-07-24 05:06:40 UTC — Recover live startup from dashboard popup
 
 Fixed the paired live-keeper workflow after a new Bilibili dashboard popup blocked

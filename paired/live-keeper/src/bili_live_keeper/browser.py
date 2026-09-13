@@ -62,7 +62,12 @@ class BiliLiveBrowser:
         self.page = None
 
     def __enter__(self) -> "BiliLiveBrowser":
-        self.start()
+        try:
+            self.start()
+        except BaseException:
+            # A failed __enter__ does not invoke __exit__; release partial startup.
+            self.close()
+            raise
         return self
 
     def __exit__(self, exc_type, exc, tb) -> None:  # type: ignore[no-untyped-def]
