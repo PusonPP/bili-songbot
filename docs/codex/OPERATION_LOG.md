@@ -1,5 +1,39 @@
 # OPERATION_LOG.md
 
+## 2026-11-02 22:18 UTC - User-authorized livestream resume
+
+The user explicitly asked to resume broadcasting, superseding the intentional
+pause recorded below. Preflight found the room offline, keeper/path/songbot
+inactive and disabled, no RTMP connection, and about 28 GiB free on root.
+
+Actions:
+
+- Ran `systemctl enable --now bili-songbot-stream-sync.path`, then
+  `systemctl enable --now bili-live-keeper.service` at 22:18:15 UTC.
+- Allowed keeper's two-check offline confirmation and existing browser workflow
+  to obtain a fresh session for the stream-sync bridge.
+- Retained songbot's disabled boot state and the keeper pusher's masked state.
+- Backed up these documents with suffix `.bak.2026-11-02_221839Z`.
+- No application code or unit file contents were changed. Existing unrelated
+  uncommitted maintenance records were preserved.
+
+Verification:
+
+- Keeper confirmed the configured area, started the room, and wrote fresh
+  stream.env at 22:19:46 UTC. The path/bridge applied it and started songbot.
+- Room API returned `live=true`, `room_live_status_1` at 22:20:14 UTC.
+- Healthz returned `ok=true`, `pusher_running=true`, `danmaku_connected=true`,
+  and RTMP output mode on both checks; process uptime continued increasing.
+- The same FFmpeg RTMP connection remained ESTAB. Acknowledged bytes increased
+  from about 9.1 MB to 22.4 MB during the follow-up observation.
+- Keeper was active/running and enabled; sync path was active/waiting and
+  enabled. Songbot was active/running but disabled for boot. The keeper's
+  black/silent pusher stayed masked/inactive.
+- Both runtime environment files retained mode 0600. Credentials and full push
+  URLs were filtered from output and were not staged. No logs were truncated.
+- This was an operational resume without source/unit changes; validation used
+  service state, the platform API, healthz, RTMP counters, and document diff checks.
+
 ## 2026-11-02 06:53 UTC - Intentional project pause
 
 User requested pausing this project and stopping the live stream. The inactive

@@ -1,5 +1,21 @@
 # CHANGELOG_CODEX.md
 
+## 2026-11-02 22:18 UTC - Resume livestream at user request
+
+- The user explicitly requested resuming the project, ending the earlier pause.
+- Preflight confirmed the room offline, paused services inactive/disabled,
+  no RTMP socket, and about 28 GiB free on the root filesystem.
+- Enabled/started the stream-sync path, then live-keeper, restoring automatic
+  startup through the fresh-session bridge. Songbot remains disabled for boot.
+- Keeper wrote the fresh stream environment at 22:19:46 UTC; the sync bridge
+  applied it and started songbot. Room API confirmed live=true, health returned
+  ok=true with danmaku/pusher active, and RTMP acknowledged bytes increased.
+- Keeper is active/running and enabled; the sync path is active/waiting and
+  enabled. The black/silent pusher remains masked/inactive.
+- No application source or unit file contents were edited. Existing unrelated
+  uncommitted maintenance entries are preserved.
+- No credentials or full push URLs were exposed or committed.
+
 ## 2026-11-02 06:53 UTC - Project paused at user request
 
 - Intentionally stopped the live stream and disabled automatic startup. This is
