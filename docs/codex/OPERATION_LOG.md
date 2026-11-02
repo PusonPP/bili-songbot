@@ -1,5 +1,44 @@
 # OPERATION_LOG.md
 
+## 2026-11-02 06:53 UTC - Intentional project pause
+
+User requested pausing this project and stopping the live stream. The inactive
+state is intentional. Do not run recovery or start-once until the user asks to
+resume. Existing uncommitted maintenance entries were preserved.
+
+Actions:
+
+- Ran `systemctl disable --now bili-songbot-stream-sync.path bili-live-keeper.service`
+  to stop automatic recovery and remove their boot enablement.
+- Ran `systemctl stop bili-songbot-stream-sync.service bili-songbot.service`
+  after stopping the producers of restart requests.
+- Keeper CLI `stop-once` initially could not click the close-live control.
+  Used the existing BiliLiveBrowser helpers as the keeper user to dismiss the
+  transient popup, click close-live, confirm, and wait for the stopped state.
+  This was a one-shot operation; no source change was required.
+- Backed up these documents with suffix `.bak.2026-11-02_065318Z` before editing.
+
+Verification:
+
+- Dashboard reported `detected_start_live_button`; room API reported
+  `live=false`, `room_live_status_0` at 2026-11-02 06:53:26 UTC.
+- Keeper, songbot, sync path, and sync service were all inactive/dead. Keeper,
+  songbot, and sync path were disabled; sync service remained static.
+- Keeper black/silent pusher remained masked/inactive.
+- No FFmpeg process, TCP connection to port 1935, or listener on port 8787 remained.
+- No matching project timer or active root crontab entry was found.
+- No service was restarted. Source/media/configuration were retained; no logs
+  were truncated. Credential values and complete push URLs were not emitted.
+
+Resume only upon a later explicit user request:
+
+- Enable/start `bili-songbot-stream-sync.path`, then `bili-live-keeper.service`.
+- Let keeper reopen the room and write a fresh stream environment. The bridge
+  then starts songbot; do not directly start songbot using the saved old session.
+- Recheck the room API, health endpoint, and RTMP transmission before reporting
+  recovery. The existing environment files are retained but are not proof of a
+  currently valid live session.
+
 ## 2026-09-14 CST - Recover stalled live-keeper
 
 The room was offline, songbot inactive, and no RTMP socket existed. Songbot logged

@@ -1,5 +1,19 @@
 # CHANGELOG_CODEX.md
 
+## 2026-11-02 06:53 UTC - Project paused at user request
+
+- Intentionally stopped the live stream and disabled automatic startup. This is
+  a requested pause, not a service failure; resume only after the user asks.
+- Disabled and stopped `bili-live-keeper.service` and
+  `bili-songbot-stream-sync.path`; stopped stream-sync.service and songbot.service.
+- Closed the Bilibili room after dismissing a dashboard popup. Both dashboard
+  and room API confirmed offline. No FFmpeg process, RTMP socket, or health
+  listener remained. The black/silent pusher remains masked/inactive.
+- Kept source, media, configuration, and credentials intact. No service was
+  restarted; no application code or unit file contents were changed.
+- Recorded commands and guarded resume steps in docs/codex/OPERATION_LOG.md.
+  Credentials and complete push URLs were not printed or committed.
+
 ## 2026-09-14 CST - Release Playwright after failed browser startup
 
 - Confirmed songbot stopped after RTMP Broken pipe at 2026-09-13 14:03:39 CST.
