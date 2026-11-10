@@ -1,5 +1,20 @@
 # CHANGELOG_CODEX.md
 
+## 2026-11-10 UTC - Complete machine-evidence ledger, not listening acceptance
+
+- Completed independent local ASR for 41 songs; user-deferred song_030 skipped.
+  Recorded 1960 source/display rows, source hashes and sampled waveform evidence.
+- Inspecting extreme apparent offsets exposed cross-verse/repeated-chorus ASR
+  matches. Excluded repeated source phrases and matched-word gaps over 3 seconds
+  from automatic anchors; added two regressions, now 52 tests passing.
+- Final ledger has 263 candidate anchors, 201 existing-start comparisons and
+  41 differences over 750ms. These are unconfirmed machine discrepancies, not
+  approved retiming. No native listening or vocal-end certification is claimed.
+- Published text-free per-track statistics in docs/lyrics-review-20261110.json;
+  full local line sheets remain ignored under runtime/.../review-final-v2.
+- Prior text hotfix and safeguards were pushed as dc6fa6d. No further production
+  edits, subtitle timing changes, service restarts or credential exposure.
+
 ## 2026-11-10 21:03 UTC - Lyric text hotfix and audio integrity safeguards
 
 - Rechecked all 42 supplied lyric/translation pairs and decoded every original

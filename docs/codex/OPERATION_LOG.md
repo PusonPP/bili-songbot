@@ -1,5 +1,41 @@
 # OPERATION_LOG.md
 
+## 2026-11-10 UTC - Completed offline evidence and conservative matching review
+
+- The prior text hotfix/safeguards checkpoint was committed and pushed to origin
+  main as dc6fa6d; unrelated original 37/51-line log edits remain unstaged.
+- The single-thread local ASR session completed successfully with 41 outputs.
+  song_030 was skipped as requested; no background ASR work remains. Output
+  existence is not recognition accuracy, and the failed native listening probe
+  did not authorize pretending these were listening batches.
+- Ran `.venv/bin/python scripts/review_lyric_alignment.py --manifest runtime/lyrics-audit-20261110/asr-manifest.json --asr runtime/lyrics-audit-20261110/asr --output runtime/lyrics-audit-20261110/review-final-v2`.
+  All ASR source hashes matched the manifest. 1960 source/display rows exported
+  to local CSV/JSON; exact original lyric files, transcriptions and audio ignored.
+- Inspected initial outliers: 018 joined words across a 100-second gap; 019/040
+  matched later repeated choruses to early source occurrences. Hardened candidate
+  selection against repeated normalized phrases and gaps >3s, rather than using
+  those false offsets to move production lyrics. Preserved first results locally.
+  Backups for review script/tests: .bak.20261110T213200Z; logs/review document
+  checkpoint: .bak.20261110T211640Z.
+- Final results: 263 candidates, 201 existing-start comparisons, 41 differences
+  >750ms, 686 conservative alignment-warning rows. None is certified as a true
+  lyric timing defect. End times and full 42-song listening remain unverified.
+  Metadata export is docs/lyrics-review-20261110.json; no lyric/audio contents.
+- `.venv/bin/python -m unittest discover -s tests -v`: 52 passed, including two
+  added false-anchor regressions. Native listening passed count remains zero.
+- Rechecked deployed nine ASS hashes, exact unchanged event times and backup
+  links; all four blocked candidates still have no ASS/cues. No new deployment.
+- Platform API returned code=0/live=true. At 21:26:49 UTC health still reported
+  ok/pusher/danmaku true, songbot PID still 1962038, disabled/running; one RTMP
+  ESTAB and bytes_acked=1765569693, up from 1281273231 at 21:09. No restart.
+- No keeper, unit, environment, cookie or token modifications. Only safe field
+  allowlists emitted; staged content scanned before commit. Original unrelated
+  doc edits, runtime diagnostics, models, original lyric files and media excluded.
+
+Acceptance: engineering and sampled audio checks PASS. Full-catalog line-by-line
+listening/translation/timing acceptance NOT PASS; nine remaining tracks still
+need independently verified subtitle replacement, and song_030 is user-deferred.
+
 ## 2026-11-10 21:03 UTC - Remaining lyrics: text deployment and audio checks
 
 User requested remaining ten songs and full-catalog line-by-line listening,

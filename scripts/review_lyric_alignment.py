@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 import csv
 from difflib import SequenceMatcher
 import hashlib
@@ -25,6 +26,8 @@ def normalize(text: str) -> str:
 
 
 def match_lines(lines: list[str], segments: list[dict]) -> list[dict]:
+    normalized_lines = [normalize(line) for line in lines]
+    occurrences = Counter(normalized_lines)
     source, words = "", []
     for segment in segments:
         words.extend(segment.get("words", []))
@@ -34,9 +37,9 @@ def match_lines(lines: list[str], segments: list[dict]) -> list[dict]:
         spoken += normalized
         word_indices.extend([index] * len(normalized))
     ranges = []
-    for line in lines:
+    for line in normalized_lines:
         start = len(source)
-        source += normalize(line)
+        source += line
         ranges.append((start, len(source)))
     pairs = {}
     for block in SequenceMatcher(None, source, spoken, autojunk=False).get_matching_blocks():
@@ -46,17 +49,24 @@ def match_lines(lines: list[str], segments: list[dict]) -> list[dict]:
     for start, end in ranges:
         matched = [i for i in range(start, end) if i in pairs]
         coverage = len(matched) / (end - start) if end > start else 0
-        result = {"text_coverage": round(coverage, 3), "anchor_candidate": False}
+        warnings = []
+        if occurrences[source[start:end]] > 1:
+            warnings.append("repeated_source_phrase_occurrence_unverified")
+        result = {"text_coverage": round(coverage, 3), "anchor_candidate": False,
+                  "alignment_warnings": warnings}
         if matched:
             first, last = words[word_indices[pairs[matched[0]]]], words[word_indices[pairs[matched[-1]]]]
             matched_words = {word_indices[pairs[i]] for i in matched}
             confidence = sum(words[i]["probability"] for i in matched_words) / len(matched_words)
+            ordered = [words[i] for i in sorted(matched_words)]
+            if any(b["start"] - a["end"] > 3 for a, b in zip(ordered, ordered[1:])):
+                warnings.append("large_gap_between_matched_words")
             result.update(asr_start_ms=round(first["start"] * 1000),
                           asr_end_ms=round(last["end"] * 1000), mean_probability=round(confidence, 3))
-            # Even a high-coverage anchor remains pending listening; short phrases
-            # and unanchored line edges are especially easy false matches in songs.
+            # Matching text alone cannot distinguish repeated choruses or words
+            # pulled from different verses. Keep these out of timing comparisons.
             result["anchor_candidate"] = bool(
-                end - start >= 6 and coverage >= .85 and confidence >= .75
+                not warnings and end - start >= 6 and coverage >= .85 and confidence >= .75
                 and matched[0] == start and matched[-1] == end - 1
                 and last["end"] > first["start"]
             )
@@ -119,6 +129,7 @@ def main() -> None:
             "song_id": sid, "rows": len(rows), "asr_available": bool(evidence),
             "has_existing_timestamps": timed,
             "anchor_candidates": sum(r["anchor_candidate"] for r in rows),
+            "alignment_warning_rows": sum(bool(r["alignment_warnings"]) for r in rows),
             "timing_comparisons": sum("start_difference_ms" in r for r in rows),
             "timing_disagreements": sum(r.get("timing_disagreement", False) for r in rows),
             "listening_passed": False, "retiming_approved": False,
