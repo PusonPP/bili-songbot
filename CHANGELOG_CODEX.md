@@ -1,5 +1,17 @@
 # CHANGELOG_CODEX.md
 
+## 2026-11-10 10:48 PST - Inventory missing lyric/subtitle sources
+
+- Extended the user-requested search to visible server files, TXT candidates,
+  56 ZIP directories, the older songbot TAR backup and project Git history.
+- No editable LRC/ASS/SRT/SSA/VTT or lyric TXT was found. UI text files are
+  current-title/queue/notice data, not song lyrics. No credential contents shown.
+- Probed all 42 source and 42 playback videos: no subtitle streams. Recorded
+  source-location limits and pending line-by-line verification in lyrics audit
+  documentation at docs/LYRICS_AUDIT.md; no claim of lyric/timing completion.
+- No source/config/media changes or service restarts. Live health remained OK.
+- Preserved unrelated preexisting document edits; only this audit is committed.
+
 ## 2026-11-10 06:11 UTC - Expand intuitive song request recognition
 
 - Added 358 alias entries across all 42 songs, preserving every previous alias

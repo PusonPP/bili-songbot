@@ -1,5 +1,34 @@
 # OPERATION_LOG.md
 
+## 2026-11-10 10:48 PST - Server-wide lyric source investigation
+
+The user asked for complete title/translation/timing review, then explicitly
+requested searching the whole server for existing LRC and rolling-lyric TXT.
+
+- Read the operating documents and playback/preprocessing/UI code.
+- Used rg filename scans, structured TXT classification and ZIP directory
+  inspection, plus tar listing of the old songbot backup and Git path history.
+- Scanned about 782,235 visible paths without traversal errors. No editable
+  subtitle file found. Of 5,607 TXT paths, inspected 193 non-sensitive candidates;
+  matching project files held UI text, not song lyrics. Avoided credential files.
+- Inspected 56 ZIP directories and the 4.57 GB songbot TAR.GZ backup. Did not
+  inspect every unrelated project TAR or access encrypted/unmounted stores.
+- ffprobe checked all 84 source/playback files for the 42-song catalog: zero
+  subtitle streams. Generated ignored diagnostics under runtime/lyrics-audit/.
+- Recorded findings, source links, limitations and pending acceptance in
+  docs/LYRICS_AUDIT.md. Requested a remembered filename/path or original files.
+- Reviewed a potential transition-head audio omission in code, but did not
+  represent it as a reproduced/fixed defect or modify production playback.
+- No application code, catalog, media, unit or credential changes. No service
+  restart/stop. Healthz allowlist remained ok=true, pusher_running=true and
+  danmaku_connected=true. No raw logs, stream URLs or credential values printed.
+- Backed up both existing logs with suffix .bak.2026-11-10_184825Z. Preserve
+  unrelated preexisting entries and stage only this new audit documentation.
+
+Result: source inventory complete for the documented scope; full lyric and
+line-timing acceptance NOT passed. Do not imply that media metadata proves
+each lyric's correctness or alignment. Await source-file location information.
+
 ## 2026-11-10 06:11 UTC - Song recognition aliases and matcher corrections
 
 Scope: improve original-title and intuitive Chinese song requests for all 42
