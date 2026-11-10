@@ -1,5 +1,20 @@
 # CHANGELOG_CODEX.md
 
+## 2026-11-10 14:45 America/Vancouver - Larger song titles without restart
+
+- Increased the main title above editable lyrics from ASS size 26 to 44.
+  Titles keep the full text, prefer parentheses/punctuation for two-line wraps,
+  and fit below notices and above lyrics; excessively long future titles are
+  reduced within bounds or rejected, never silently clipped.
+- Hot-updated all 32 active external subtitle tracks, changing only title text
+  overrides. Lyric content, event timing, audio, media paths and aliases unchanged.
+  Ten old videos with burned-in titles and the left sidebar are unchanged.
+- Rendered/pixel-checked all 32 titles and inspected two full-overlay before/after
+  examples. All 42 catalog names fit at size 44; 55 regression tests passed.
+- Backups and an atomic subtitle-link deployment avoid any service restart.
+  Confirmed live song_011 renderer uses the new release; stream/danmaku healthy.
+- No keeper/unit/credential edits, secret output, or media/runtime Git additions.
+
 ## 2026-11-10 UTC - Complete machine-evidence ledger, not listening acceptance
 
 - Completed independent local ASR for 41 songs; user-deferred song_030 skipped.

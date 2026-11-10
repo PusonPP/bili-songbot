@@ -31,7 +31,7 @@ songs:
   notes: 日文原名：50と4つの忘れ物；中文译名：50又4之遗失物；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_001_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_001/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_001/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_001/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -61,7 +61,7 @@ songs:
   notes: 日文原名：Beginning；中文译名：Beginning；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_002_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_002/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_002/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_002/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -159,7 +159,7 @@ songs:
   notes: 日文原名：Never ending saga；中文译名：永无止境的佐贺；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_005_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_005/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_005/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_005/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -187,7 +187,7 @@ songs:
   notes: 日文原名：Nope!!!!!；中文译名：Nope!!!!!；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_006_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_006/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_006/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_006/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -216,7 +216,7 @@ songs:
   notes: 日文原名：REVENGE；中文译名：REVENGE；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_007_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_007/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_007/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_007/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -349,7 +349,7 @@ songs:
   notes: 日文原名：FANTASTIC LOVERS；中文译名：FANTASTIC LOVERS；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_011_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_011/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_011/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_011/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -384,7 +384,7 @@ songs:
   notes: 日文原名：アツクナレ；中文译名：热血沸腾吧；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_012_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_012/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_012/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_012/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -420,7 +420,7 @@ songs:
   notes: 日文原名：イカの魂無駄にはしない～小島食品工場株式会社社歌～；中文译名：鱿鱼之魂不会没用～小岛食品工厂株式会社社歌～；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_013_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v2/song_013/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v2/song_013/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_013/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -456,7 +456,7 @@ songs:
   notes: 日文原名：すきっちゃん！からチュッ；中文译名：喜欢！唐津啾；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_014_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_014/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_014/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_014/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -488,7 +488,7 @@ songs:
   notes: 日文原名：ゼリーフィッシュ；中文译名：Jellyfish；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_015_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_015/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_015/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_015/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -566,7 +566,7 @@ songs:
   notes: 日文原名：ぶっちゃけてフォーユー；中文译名：为你献上真心；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_017_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_017/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_017/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_017/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -598,7 +598,7 @@ songs:
   notes: 日文原名：輝いて；中文译名：闪耀吧；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_018_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_018/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_018/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_018/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -639,7 +639,7 @@ songs:
   notes: 日文原名：徒花ネクロマンシー；中文译名：徒花招魂术；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_019_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_019/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_019/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_019/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -676,7 +676,7 @@ songs:
   notes: 日文原名：またたく宇宙（ソラ）に憧れて；中文译名：憧憬闪烁的宇宙（天空）；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_020_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_020/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_020/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_020/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -709,7 +709,7 @@ songs:
   notes: 日文原名：ヨミガエレ；中文译名：复苏吧；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_021_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_021/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_021/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_021/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -815,7 +815,7 @@ songs:
   notes: 日文原名：光へ；中文译名：走向光明；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_024_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_024/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_024/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_024/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -851,7 +851,7 @@ songs:
   notes: 日文原名：今を未来をありがとう；中文译名：感谢现在与未来；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_025_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_025/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_025/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_025/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -893,7 +893,7 @@ songs:
   notes: 日文原名：今日が歴史に残るなら；中文译名：若今日能载入史册；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_026_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_026/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_026/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_026/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -930,7 +930,7 @@ songs:
   notes: 日文原名：今日はカレーだイェイイェイイェイ；中文译名：今天是咖喱耶耶耶；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_027_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v2/song_027/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v2/song_027/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_027/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -966,7 +966,7 @@ songs:
   notes: 日文原名：佐賀事変；中文译名：佐贺事变；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_028_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_028/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_028/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_028/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -1000,7 +1000,7 @@ songs:
   notes: 日文原名：七福大祭典；中文译名：七福大祭典；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_029_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_029/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_029/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_029/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -1074,7 +1074,7 @@ songs:
   notes: 日文原名：大河よ共に泣いてくれ；中文译名：大河啊一同哭泣吧；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_031_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_031/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_031/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_031/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -1114,7 +1114,7 @@ songs:
   notes: 日文原名：追い風トラベラーズ；中文译名：顺风旅人；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_032_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_032/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_032/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_032/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -1150,7 +1150,7 @@ songs:
   notes: 日文原名：特攻DANCE ～DAWN OF THE BAD～；中文译名：特攻DANCE ～DAWN OF THE BAD～；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_033_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v2/song_033/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v2/song_033/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_033/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -1186,7 +1186,7 @@ songs:
   notes: 日文原名：風の強い日は嫌いか？ FranChouChou cover；中文译名：讨厌风大的日子吗？ FranChouChou cover；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_034_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_034/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_034/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_034/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -1226,7 +1226,7 @@ songs:
   notes: 日文原名：風の強い日は嫌いか？；中文译名：讨厌风大的日子吗？；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_035_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_035/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_035/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_035/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -1258,7 +1258,7 @@ songs:
   notes: 日文原名：冒険ズンドコドン!；中文译名：冒险吱咚咳咚；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_036_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_036/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_036/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_036/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -1301,7 +1301,7 @@ songs:
   notes: 日文原名：夢を手に、戻れる場所もない日々を；中文译名：将梦想掌握手中，漫步于没有归处的日子；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_037_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_037/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_037/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_037/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -1370,7 +1370,7 @@ songs:
     Type R）；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_039_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_039/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_039/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_039/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -1405,7 +1405,7 @@ songs:
   notes: 日文原名：目覚めRETURNER (Electric Returner)；中文译名：觉醒吧RETURNER（Electric Returner）；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_040_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_040/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_040/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_040/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -1440,7 +1440,7 @@ songs:
   notes: 日文原名：目覚めRETURNER；中文译名：觉醒吧RETURNER；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_041_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_041/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_041/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_041/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -1474,7 +1474,7 @@ songs:
   notes: 日文原名：悠久ネバーダイ；中文译名：悠久Never Die；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_042_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_042/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_042/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v4-title44/song_042/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay

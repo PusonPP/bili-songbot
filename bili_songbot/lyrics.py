@@ -122,6 +122,31 @@ def _wrap(text: str, font: ImageFont.FreeTypeFont, width: int) -> list[str]:
     return lines or [""]
 
 
+def song_title_event(title: str, duration: float, font_path: Path) -> pysubs2.SSAEvent:
+    # Two lines stay above the lyric area's top edge, below the rotating notice.
+    for size in range(44, 31, -1):
+        font = ImageFont.truetype(str(font_path), size)
+        text = _ass_text(title)
+        lines = _wrap(text, font, 744)
+        if len(lines) > 1:
+            brackets = [i for i, char in enumerate(text) if char in "(（"]
+            breaks = [i + 1 for i, char in enumerate(text) if char in " ,，、"]
+            for positions in (brackets, breaks):
+                options = [[text[:i], text[i:]] for i in positions if 0 < i < len(text)]
+                options = [pair for pair in options if all(font.getlength(line) <= 744 for line in pair)]
+                if options:
+                    lines = min(options, key=lambda pair: abs(font.getlength(pair[0]) - font.getlength(pair[1])))
+                    break
+        if len(lines) <= 2:
+            break
+    else:
+        raise ValueError("Song title exceeds the two-line safe area")
+    return pysubs2.SSAEvent(
+        start=0, end=math.floor(duration * 1000),
+        text=r"{\an8\pos(850,96)\fs" + str(size) + "}" + r"\N".join(lines),
+    )
+
+
 def bilingual_ass(cues: list[LyricCue], title: str, duration: float, font_path: Path) -> pysubs2.SSAFile:
     validate_cues(cues, duration)
     subs = pysubs2.SSAFile()
@@ -130,12 +155,7 @@ def bilingual_ass(cues: list[LyricCue], title: str, duration: float, font_path: 
         fontname="Noto Sans CJK SC", fontsize=32, alignment=pysubs2.Alignment.MIDDLE_CENTER,
         outline=2, shadow=1, marginl=450, marginr=30,
     )
-    title_font = ImageFont.truetype(str(font_path), 26)
-    title_text = r"\N".join(_wrap(_ass_text(title), title_font, 744))
-    subs.events.append(pysubs2.SSAEvent(
-        start=0, end=math.floor(duration * 1000),
-        text=r"{\an8\pos(850,120)\fs26}" + title_text,
-    ))
+    subs.events.append(song_title_event(title, duration, font_path))
     for cue in cues:
         for size in range(32, 17, -1):
             font = ImageFont.truetype(str(font_path), size)

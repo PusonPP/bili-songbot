@@ -17,7 +17,7 @@ from PIL import Image
 
 from bili_songbot.config import AppConfig
 from bili_songbot.controller import SongbotApp
-from bili_songbot.lyrics import LyricCue, bilingual_ass, read_bilingual_lrc, validate_cues
+from bili_songbot.lyrics import LyricCue, bilingual_ass, read_bilingual_lrc, song_title_event, validate_cues
 from bili_songbot.models import RuntimeStatus, Song
 from bili_songbot.renderer import FFmpegRenderer
 from scripts.import_lyrics import apply_reference_timing, correct_text
@@ -111,6 +111,33 @@ class LrcTests(unittest.TestCase):
         self.assertNotIn(":60.", text)
         self.assertNotIn(r"{\pos(0,0)}", text)
         self.assertIn(r"\pos(850,365)", text)
+
+    @unittest.skipUnless(FONT.is_file(), "CJK font unavailable")
+    def test_larger_title_preserves_text_and_timing_with_safe_wrapping(self):
+        titles = [s["display_name"] for s in yaml.safe_load(
+            (Path(__file__).resolve().parents[1] / "config/songs.yaml").read_text())["songs"]]
+        for title in titles:
+            with self.subTest(title=title):
+                event = song_title_event(title, 300.123, FONT)
+                self.assertIn(r"\fs44", event.text)
+                self.assertIn(r"\pos(850,96)", event.text)
+                self.assertLessEqual(event.plaintext.count("\n"), 1)
+                self.assertEqual(event.plaintext.replace("\n", ""), title)
+                self.assertEqual((event.start, event.end), (0, 300123))
+
+    @unittest.skipUnless(FONT.is_file(), "CJK font unavailable")
+    def test_title_tags_are_escaped_and_oversize_titles_rejected(self):
+        event = song_title_event(r"title {\pos(0,0)}", 10, FONT)
+        self.assertNotIn(r"{\pos(0,0)}", event.text)
+        with self.assertRaises(ValueError):
+            song_title_event("W" * 300, 10, FONT)
+
+    @unittest.skipUnless(FONT.is_file(), "CJK font unavailable")
+    def test_long_version_title_wraps_at_parenthesis_not_inside_words(self):
+        title = "RETURNER (Electric Returner Type R)"
+        event = song_title_event(title, 10, FONT)
+        self.assertIn(r"\N(Electric Returner Type R)", event.text)
+        self.assertEqual(event.plaintext.replace("\n", ""), title)
 
 
 class BlockedReferenceTests(unittest.TestCase):

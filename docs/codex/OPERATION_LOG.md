@@ -1,5 +1,60 @@
 # OPERATION_LOG.md
 
+## 2026-11-10 14:45 America/Vancouver - Enlarge primary song titles
+
+User requested larger song-name text in the live picture. The small title is
+the new external ASS title above the lyric area (26), not the lyric font (32).
+
+- Read AGENTS and all six operating/context documents, lyric generation,
+  renderer, pusher, UI layout and tests. Initial health/RTMP normal; songbot PID
+  1962038. Existing unrelated 37/51-line log edits preserved outside this commit.
+- Backed up lyrics.py, tests/test_lyrics.py, songs.yaml and both logs with
+  .bak.20261110T214011Z before edits; each deployed old ASS has that backup suffix.
+- Added song_title_event: primary size 44, maximum two lines, position (850,96),
+  measured width bounds and size fallback down to 32 for future unusually long
+  names. Prefer a version subtitle at the parenthesis, then punctuation/spaces,
+  to avoid splitting English words unnecessarily. Lyric layout is untouched.
+- Generated a subtitle-only release at media/lyrics/20261110-v4-title44 for all
+  32 editable songs. Only event zero's title overrides differ; all event times
+  and every lyric event field are exactly unchanged after ASS round-trip.
+  Reused existing media, copied cues for audit continuity, no audio/video encode.
+- An initial offline preview exposed an awkward English word split; corrected
+  wrapping before deployment and kept that draft under ignored runtime storage.
+  All 32 final title frames passed actual FFmpeg pixel bounds checks (combined
+  occupied bounds x=605..1095, y=105..183, below notices and above lyric area).
+  Inspected full pusher-layout before/after renders for 037 and 039, including
+  long Chinese and English-version titles, notice, sidebar and spectrum.
+- At 14:45:36 America/Vancouver (UTC-07:00), activate.py verified hashes, event
+  invariants and catalog-only subtitle-path changes, backed up all previous ASS,
+  and atomically linked old paths to the new release. Config now records new
+  paths for future starts; current renderer resolves the links each chunk.
+  Existing older compatibility links remain valid through the new links.
+- Confirmed active song_011 renderer references 20261110-v4-title44. Health
+  ok/pusher/danmaku remained true; main PID unchanged and RTMP ESTAB maintained,
+  acknowledged bytes grew from 2141436672 before work to 2302032222 after deploy.
+
+Changed tracked files: bili_songbot/lyrics.py, tests/test_lyrics.py,
+config/songs.yaml, CHANGELOG_CODEX.md and docs/codex/OPERATION_LOG.md.
+
+Commands/checks:
+
+- `.venv/bin/python runtime/title-size-20261110/prepare.py`: 32 ASS frames,
+  hashes and unchanged lyric/timing invariants passed.
+- `.venv/bin/python runtime/title-size-20261110/preview.py`: full UI previews.
+- `.venv/bin/python runtime/title-size-20261110/activate.py`: atomic hot update;
+  backup/rollback inventory in runtime/title-size-20261110/deployed.json.
+- `.venv/bin/python -m unittest discover -s tests -v`: 55 passed, including all
+  42 title strings, full-text retention, two-line limits, parentheses wrapping,
+  ASS escaping, oversized-title rejection and previous timing/alias regressions.
+- `.venv/bin/python -m compileall -q bili_songbot tests`, `git diff --check` passed.
+- Allowlisted health/systemctl/ss/process-filter checks only; no raw logs or
+  RTMP push arguments. Staged-secret scan before explicit-path commit/push.
+
+No service restart, stop, keeper, systemd or credential change. No sensitive
+information exposed or committed. Remaining scope: ten old videos' burned-in
+titles and the left sidebar are unchanged; prior pending lyric listening remains
+pending and is not affected by this visual-only update.
+
 ## 2026-11-10 UTC - Completed offline evidence and conservative matching review
 
 - The prior text hotfix/safeguards checkpoint was committed and pushed to origin
