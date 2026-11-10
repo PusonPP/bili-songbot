@@ -1,5 +1,29 @@
 # CHANGELOG_CODEX.md
 
+## 2026-11-10 06:11 UTC - Expand intuitive song request recognition
+
+- Added 358 alias entries across all 42 songs, preserving every previous alias
+  and all playback metadata. The index now has 805 normalized names/IDs.
+- Added short Chinese/kanji keywords such as history, universe, squid, adventure,
+  and version-specific names; original Japanese titles remain exact matches.
+- Verified local video title frames, official track lists, and three public
+  station uploads. Added the station's published history-song translation.
+  Source links and research limitations are in docs/SONG_REQUEST_ALIASES.md.
+- Normalized Unicode punctuation/copy-paste formatting, fixed command/ID parsing,
+  ranked fuzzy candidates by distinct songs, and removed unrestricted matching
+  of a short alias inside a longer chat sentence. Numeric IDs remain exact-only.
+- Added 18 offline regression/integration tests. All pass, including every
+  configured alias, all 42 original titles, version disambiguation, cooldown,
+  duplicate requests, and rejection without queue mutation.
+- The curated 42-keyword sample improved from 11/42 correct (7 exact) to 42/42
+  exact. This is a regression sample, not a measured real-world accuracy rate.
+- Backups use suffix .bak.2026-11-10_061121Z. Unrelated existing maintenance
+  records are preserved. Deployment verification is recorded in OPERATION_LOG.
+- No keeper/systemd/credential changes; no media or runtime files are committed.
+- Restarted only songbot at 06:20:20 UTC to load the new matcher/catalog.
+  Verified room live, health/danmaku/pusher healthy, and increasing RTMP bytes;
+  keeper and sync path remained active, black/silent pusher masked/inactive.
+
 ## 2026-11-02 22:18 UTC - Resume livestream at user request
 
 - The user explicitly requested resuming the project, ending the earlier pause.

@@ -1,5 +1,66 @@
 # OPERATION_LOG.md
 
+## 2026-11-10 06:11 UTC - Song recognition aliases and matcher corrections
+
+Scope: improve original-title and intuitive Chinese song requests for all 42
+existing songs. Do not change playback assets, queue policy, keeper, units,
+stream credentials, or unrelated maintenance records already in the worktree.
+
+Research and changes:
+
+- Read project operating/safety documentation, matcher, queue, configuration,
+  controller and storage. Checked all 42 local video title frames and official
+  discographies, plus indexed station uploads; documented sources and limits in
+  docs/SONG_REQUEST_ALIASES.md. Public uploader enumeration was rate-limited;
+  no credentials were used to bypass it. No claim of exhaustive subtitle review.
+- Backed up matcher.py, songs.yaml and both operation documents with suffix
+  .bak.2026-11-10_061121Z before editing.
+- Appended 358 aliases only; all original aliases and non-alias metadata were
+  verified unchanged. Normalized alias index: 453 before, 805 after.
+- Fixed fuzzy ambiguity previously masked by multiple synonyms of one song;
+  preserved exact matches ahead of version ambiguity. Stopped inverse substring
+  matches on chat sentences. Fixed song_026 parsing and Unicode punctuation.
+- Added tests/test_matcher.py with 18 offline tests. Tests use a temporary
+  database and never send live danmaku or add requests to the production queue.
+
+Validation commands and results:
+
+- `.venv/bin/python -m unittest discover -s tests -v`: 18 tests passed, including
+  all configured aliases/display names/IDs and all 42 original titles/keywords.
+- `.venv/bin/python -m compileall -q bili_songbot tests`: passed.
+- `git diff --check`: passed.
+- Structured comparison against the backup confirmed only alias additions in
+  songs.yaml. A curated 42-keyword sample improved from 11 correct (7 exact)
+  to 42 correct/exact; this is not a production accuracy measurement.
+- Pre-deployment healthz allowlist: ok=true, pusher_running=true,
+  danmaku_connected=true; room API code=0/live_status=1; FFmpeg RTMP ESTAB.
+- Songbot active/disabled for boot; keeper active/enabled; sync path waiting;
+  black/silent keeper pusher masked/inactive. Root filesystem had 26 GiB free.
+
+Deployment and follow-up:
+
+- Announced `systemctl restart bili-songbot.service` and its brief stream
+  reconnect before execution; ran it once at 06:20:20 UTC. The active stream
+  session had just been confirmed valid; no saved stale session was started.
+- New songbot process started at 06:20:21 UTC. Health checks returned ok=true,
+  pusher_running=true and danmaku_connected=true; room API live_status=1.
+- Same new FFmpeg RTMP connection remained ESTAB; acknowledged bytes increased
+  from 3,777,215 to 21,837,678 by 06:21:09 UTC. A viewer request entered the
+  queue during observation; no synthetic request was sent to the live service.
+- Post-startup log marker counts for RTMP_BROKEN_PIPE_FATAL, Broken pipe,
+  End of file, Traceback and playback/danmaku failures were all zero. Only
+  allowlisted health fields and error counts were displayed, not raw logs.
+- Keeper PID unchanged; sync path active/waiting; songbot disabled for boot;
+  black/silent keeper pusher masked/inactive. No other service was restarted.
+- No secrets or complete push URLs were printed; sensitive files untouched.
+  Only explicit task paths are staged, with this new document section staged
+  separately from the unrelated preexisting uncommitted entries below.
+
+Remaining limits: alternate translations not yet in the curated catalog may
+still need explicit aliases; broad or version-ambiguous requests are rejected.
+The 18 offline tests and live health checks do not substitute for exhaustive
+human evaluation of future danmaku wording. Deployment needed one reconnect.
+
 ## 2026-11-02 22:18 UTC - User-authorized livestream resume
 
 The user explicitly asked to resume broadcasting, superseding the intentional

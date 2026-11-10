@@ -14,6 +14,15 @@ songs:
   - 纯子成名曲
   - 纯子solo
   - フランシュシュ4号
+  - 遗失物
+  - 遗忘
+  - 忘れ物
+  - 忘物
+  - 遗忘之物
+  - 50和4个遗失物
+  - 50与4件遗忘之物
+  - 五十又四
+  - 純子solo
   duration: 228.2
   weight: 1.0
   enabled: true
@@ -37,6 +46,12 @@ songs:
   - ビギニング
   - 爱中心曲
   - 水野爱C位曲
+  - 起点
+  - 初始
+  - 开端曲
+  - 水野爱Beginning
+  - 水野愛Beginning
+  - 爱酱Beginning
   duration: 222.6
   weight: 1.0
   enabled: true
@@ -61,6 +76,13 @@ songs:
   - Rap对决
   - Green Face
   - グリーンフェイス
+  - 说唱
+  - 饶舌
+  - 说唱对决
+  - rap
+  - rap battle
+  - 死亡或说唱
+  - 不说唱就去死
   duration: 144.52
   weight: 1.0
   enabled: true
@@ -86,6 +108,13 @@ songs:
   - 让Flag迎风飘扬
   - FLAGを
   - Flag o Hatemekasero
+  - 旗帜
+  - 旗子
+  - 挥旗
+  - 飘扬
+  - 迎风飘扬
+  - 让旗帜飘扬
+  - 讓旗幟飄揚吧
   duration: 275.68
   weight: 1.0
   enabled: true
@@ -112,6 +141,13 @@ songs:
   - ネバーエンディングサガ
   - 巽幸太郎角色歌
   - 幸太郎曲
+  - 永无止境
+  - 永不终结
+  - 永不完结
+  - 无尽佐贺
+  - 永不结束的佐贺
+  - 永無止境的佐賀
+  - 幸太郎Never ending saga
   duration: 250.48
   weight: 1.0
   enabled: true
@@ -134,6 +170,11 @@ songs:
   - ノープ
   - 2019年アイアンフリル
   - 诗织中心曲
+  - 诺普
+  - 铁裙NOPE
+  - 新铁裙NOPE
+  - 诗织NOPE
+  - 詩織NOPE
   duration: 238.88
   weight: 1.0
   enabled: true
@@ -157,6 +198,11 @@ songs:
   - リベンジ
   - Revenge主题曲之一
   - 二期象征曲
+  - 复仇曲
+  - 复仇之歌
+  - 復仇
+  - 雪耻
+  - Revenge插曲
   duration: 270.64
   weight: 1.0
   enabled: true
@@ -182,6 +228,15 @@ songs:
   - Lily回曲
   - 莉莉回
   - 一期第8话ED
+  - 亲爱
+  - 最亲爱
+  - 亲爱的你
+  - 致最爱的你
+  - 致我最亲爱的你
+  - 致我最親愛的人
+  - 莉莉爸爸
+  - 莉莉父亲
+  - 莉莉父女曲
   duration: 303.32
   weight: 1.0
   enabled: true
@@ -207,6 +262,13 @@ songs:
   - 我们是FranChouChou
   - 法兰秀秀自我介绍歌
   - 成员介绍歌
+  - 自我介绍
+  - 成员介绍
+  - 报名字
+  - 我们是法兰秀秀
+  - 我们是芙兰秀秀
+  - 我们是芙蘭秀秀
+  - We are Fran Chou Chou!
   duration: 415.12
   weight: 1.0
   enabled: true
@@ -231,6 +293,14 @@ songs:
   - ゾンビランドデンパ
   - 电波组联动曲
   - でんぱ組.inc联动
+  - DEMPA
+  - 电波联动
+  - 电波组
+  - 電波組
+  - 僵尸电波
+  - 僵尸之地电波
+  - 佐贺电波
+  - 僵尸乐园DEMPA
   duration: 316.32
   weight: 1.0
   enabled: true
@@ -255,6 +325,14 @@ songs:
   - 旧アイアンフリル
   - 水野爱生前组合曲
   - Iron Frill出道画面曲
+  - 幻想恋人
+  - 梦幻恋人
+  - 奇幻恋人
+  - Fantastic
+  - Lovers
+  - 旧铁裙
+  - 老铁裙
+  - 铁裙出道曲
   duration: 250.44
   weight: 1.0
   enabled: true
@@ -281,6 +359,14 @@ songs:
   - アツくなれ
   - 纯爱回
   - 水野爱与绀野纯子回
+  - 热血
+  - 热血沸腾
+  - 燃起来
+  - 燃烧起来
+  - 炽热
+  - 灼热
+  - 熱血
+  - 熱くなれ
   duration: 285.92
   weight: 1.0
   enabled: true
@@ -308,6 +394,14 @@ songs:
   - 小島食品工場社歌
   - Ika no Tamashii Muda ni wa Shinai
   - 佐贺鱿鱼曲
+  - 鱿鱼
+  - 魷魚
+  - 鱿鱼之魂
+  - 鱿鱼灵魂
+  - 小岛食品
+  - 小島食品
+  - 鱿鱼不会白费
+  - 鱿鱼之魂不会浪费
   duration: 95.2
   weight: 1.0
   enabled: true
@@ -336,6 +430,13 @@ songs:
   - 唐津市コラボ曲
   - フランシュシュ初电波曲
   - 电波歌
+  - 唐津
+  - 唐津啾
+  - 喜欢唐津
+  - 最喜欢唐津
+  - 喜欢你唐津啾
+  - 唐津联动
+  - 唐津電波
   duration: 216.16
   weight: 1.0
   enabled: true
@@ -361,6 +462,12 @@ songs:
   - 现アイアンフリル曲
   - 新Iron Frill曲
   - 诗织曲
+  - 水母歌
+  - 海蜇
+  - 海月
+  - 铁裙水母
+  - 詩織水母
+  - Jelly Fish
   duration: 284.68
   weight: 1.0
   enabled: true
@@ -390,6 +497,16 @@ songs:
   - ドライブイン鳥
   - ドライブイン鳥CM
   - 佐贺本地广告歌
+  - 烤鸡
+  - 烤鸡店
+  - 烧鸟
+  - 烧鸟店
+  - 烧鸡
+  - ドライブイン鸟
+  - Drive in 鸟
+  - Drive in 鳥
+  - ドライブイン鳥フランシュシュ
+  - 烤雞
   duration: 26.68
   weight: 1.0
   enabled: true
@@ -417,6 +534,16 @@ songs:
   - 舞舞加入曲
   - 楪舞々曲
   - フランシュシュ7号
+  - 真心
+  - 献上真心
+  - 坦率
+  - 坦白
+  - 坦率地为你
+  - 坦诚为你
+  - 为你坦白
+  - 舞舞
+  - 舞々
+  - 舞舞加入
   duration: 243.92
   weight: 1.0
   enabled: true
@@ -442,6 +569,12 @@ songs:
   - 光辉吧
   - Kagayaite
   - かがやいて
+  - 光辉
+  - 闪光
+  - 闪耀吧辉
+  - 輝耀
+  - 閃耀
+  - 輝き
   duration: 241.48
   weight: 1.0
   enabled: true
@@ -472,6 +605,16 @@ songs:
   - 一期OP
   - 第一季OP
   - ゾンビランドサガOP
+  - 招魂
+  - 徒花招魂
+  - 徒花死灵术
+  - 徒花死靈術
+  - 死灵术
+  - 徒花招魂術
+  - 无果之花
+  - 无果之花招魂术
+  - 一期片头曲
+  - 第一季片头曲
   duration: 248.8
   weight: 1.0
   enabled: true
@@ -498,6 +641,16 @@ songs:
   - Matataku Sora ni Akogarete
   - Matataku Uchuu ni Akogarete
   - 剧场版主题曲
+  - 宇宙
+  - 天空
+  - 憧憬
+  - 闪烁宇宙
+  - 闪耀宇宙
+  - 憧憬闪耀的宇宙
+  - 憧憬闪烁的宇宙
+  - 憧憬闪耀的宇宙（天空）
+  - 向往闪烁的宇宙
+  - 嚮往閃爍的宇宙
   duration: 301.36
   weight: 1.0
   enabled: true
@@ -523,6 +676,13 @@ songs:
   - よみがえれ
   - Yomigaere
   - Arpino曲
+  - 复苏
+  - 苏醒
+  - 复活
+  - 甦醒
+  - 復甦
+  - 復活
+  - Yomigaere复苏
   duration: 287.6
   weight: 1.0
   enabled: true
@@ -547,6 +707,15 @@ songs:
   - 莉莉即兴曲
   - Scatman风格曲
   - フランシュシュ6号
+  - 帕拉波
+  - 小小帕拉波
+  - 小小帕拉帕
+  - 小帕拉波
+  - Parappo
+  - Scatman
+  - 莉莉口技
+  - 莉莉即兴
+  - 莉莉选秀
   duration: 91.76
   weight: 1.0
   enabled: true
@@ -572,6 +741,16 @@ songs:
   - 激昂サバイブ完全版
   - Gekkou Survive Complete Edition
   - Gekkō Survive
+  - 激昂生存
+  - 激昂求生
+  - 激昂幸存
+  - 激昂Survive完整版
+  - 激昂サバイブ
+  - 激昂サバイブComplete Edition
+  - 纯子吉他
+  - 砸吉他
+  - 摔吉他
+  - 激昂生存完整版
   duration: 252.24
   weight: 1.0
   enabled: true
@@ -600,6 +779,15 @@ songs:
   - 一期ED
   - 第一季ED
   - ゾンビランドサガED
+  - 光
+  - 光明
+  - 向光
+  - 向着光芒
+  - 向光而行
+  - 走向光
+  - 走向光芒
+  - 第一季片尾曲
+  - 一期片尾曲
   duration: 215.4
   weight: 1.0
   enabled: true
@@ -625,6 +813,15 @@ songs:
   - 今を未来を
   - Ima o Mirai o Arigatou
   - Ima wo Mirai wo Arigatou
+  - 现在与未来
+  - 现在未来
+  - 今未来
+  - 感谢未来
+  - 感谢现在和未来
+  - 谢谢你现在和未来
+  - 感謝現在與未來
+  - 謝謝你現在與未來
+  - 剧场版片尾曲
   duration: 303.12
   weight: 1.0
   enabled: true
@@ -649,6 +846,22 @@ songs:
   - 今日が歴史
   - Kyou ga Rekishi ni Nokoru nara
   - Kyō ga Rekishi ni Nokoru nara
+  - 历史
+  - 歴史
+  - 歷史
+  - 史册
+  - 史冊
+  - 青史
+  - 铭刻
+  - 载入史册
+  - 名留青史
+  - 如果今天将被铭刻于历史
+  - 如果今天能留在历史中
+  - 如果今天能被载入史册
+  - 若今日能留名青史
+  - 今日が历史に残るなら
+  - 今日が歷史に残るなら
+  - 如果今日能载入史册
   duration: 244.2
   weight: 1.0
   enabled: true
@@ -677,6 +890,14 @@ songs:
   - 男の子マンションズ
   - 儿童节目曲
   - 咖喱
+  - 咖哩
+  - 咖喱饭
+  - 咖喱耶耶耶
+  - 今天吃咖喱
+  - 今天是咖喱
+  - カレー
+  - 咖喱之歌
+  - 今天吃咖哩耶耶耶
   duration: 47.08
   weight: 1.0
   enabled: true
@@ -704,6 +925,14 @@ songs:
   - ゆうぎり中心曲
   - 夕雾中心曲
   - 昭和歌谣风
+  - 事变
+  - 事変
+  - 事變
+  - 佐賀事變
+  - 佐贺事変
+  - 佐賀事变
+  - 夕雾事变
+  - 夕霧事變
   duration: 244.08
   weight: 1.0
   enabled: true
@@ -730,6 +959,13 @@ songs:
   - ぱちんこ曲
   - Pゾンビランドサガ曲
   - Sammy联动曲
+  - 七福大祭
+  - 七福祭
+  - 祭典
+  - 大祭典
+  - 七福庆典
+  - 七福慶典
+  - 七福大庆典
   duration: 229.36
   weight: 1.0
   enabled: true
@@ -755,6 +991,15 @@ songs:
   - 源樱solo
   - 源さくらsolo
   - 源樱角色歌
+  - 宣誓
+  - 宣誓ALIVE
+  - 宣誓活着
+  - 活着的感觉
+  - 存活感
+  - ALIVE Sensation
+  - 生存宣言
+  - 源樱宣誓
+  - 源櫻宣誓
   duration: 315.76
   weight: 1.0
   enabled: true
@@ -784,6 +1029,15 @@ songs:
   - 二期OP
   - Revenge OP
   - ゾンビランドサガ リベンジOP
+  - 一同哭泣
+  - 共同哭泣
+  - 陪我哭泣
+  - 与我同泣
+  - 大河啊请与我一同哭泣
+  - 大河啊与我一同哭泣吧
+  - 大河与我同泣
+  - 第二季片头曲
+  - 二期片头曲
   duration: 212.16
   weight: 1.0
   enabled: true
@@ -812,6 +1066,17 @@ songs:
   - 二期最终话插曲
   - Revenge最终话曲
   - EFS演唱会曲
+  - 顺风
+  - 追风
+  - 追風
+  - 順風
+  - 旅人
+  - 旅行者
+  - 顺风旅行
+  - 追风旅行者
+  - 顺风旅者
+  - 追风旅者
+  - 顺风旅行家
   duration: 241.04
   weight: 1.0
   enabled: true
@@ -839,6 +1104,14 @@ songs:
   - 暴走族回曲
   - 二阶堂咲回
   - サキ回
+  - 特攻
+  - 特攻舞蹈
+  - 特攻之舞
+  - 暴走
+  - 暴走族
+  - 特攻ダンス
+  - 咲特攻
+  - 不良舞蹈
   duration: 252.64
   weight: 1.0
   enabled: true
@@ -864,6 +1137,16 @@ songs:
   - Kaze no Tsuyoi Hi wa Kirai ka? FranChouChou cover
   - フランシュシュcover
   - 白龙曲翻唱
+  - 风大翻唱
+  - 大风天翻唱
+  - 讨厌大风天翻唱
+  - 风强翻唱
+  - 风大法兰秀秀版
+  - 风大的日子翻唱
+  - 讨厌刮风的日子吗翻唱
+  - 風の強い日は嫌いかフランシュシュcover
+  - 風の強い日は嫌いか法兰秀秀版
+  - 风大cover
   duration: 216.96
   weight: 1.0
   enabled: true
@@ -891,6 +1174,18 @@ songs:
   - ホワイト竜曲
   - ホワイト竜
   - 白竜
+  - 风大
+  - 大风天
+  - 风强
+  - 風強
+  - 白龙
+  - 白龍
+  - 讨厌大风天
+  - 讨厌刮风的日子吗
+  - 风大的日子
+  - 风大原版
+  - 风大白龙版
+  - 你讨厌刮风的日子吗
   duration: 275.6
   weight: 1.0
   enabled: true
@@ -914,6 +1209,14 @@ songs:
   - 冒险吱咚咳咚
   - Bōken Zundokodon
   - Boken Zundokodon
+  - 冒险
+  - 冒険
+  - 冒險
+  - 冒险咚咚咚
+  - 冒险尊嘟咚
+  - 冒险兹咚咚
+  - Zundokodon
+  - ズンドコドン
   duration: 189.16
   weight: 1.0
   enabled: true
@@ -943,6 +1246,19 @@ songs:
   - 第二季ED
   - 二期ED
   - Revenge ED
+  - 梦想
+  - 夢想
+  - 梦在手中
+  - 梦想在手
+  - 手握梦想
+  - 将梦想握在手中
+  - 无处可归
+  - 没有归处
+  - 无法回头
+  - 手握梦想在无处可归的日子里
+  - 怀抱梦想度过无处可归的时光
+  - 二期片尾曲
+  - 第二季片尾曲
   duration: 259.12
   weight: 1.0
   enabled: true
@@ -968,6 +1284,11 @@ songs:
   - 生命之歌
   - 大空ライト曲
   - 大空光曲
+  - 生命曲
+  - 生命之歌大空光
+  - いのち
+  - 大空光生命
+  - 大空ライト命
   duration: 103.0
   weight: 1.0
   enabled: true
@@ -994,6 +1315,17 @@ songs:
   - Electric Returner Type R
   - Mezame RETURNER Electric Returner Type R
   - 爱3号Type R版
+  - Type R
+  - R版
+  - 电音R
+  - 电音R版
+  - 觉醒R版
+  - 觉醒Type R
+  - RETURNER R
+  - RETURNER Type R
+  - 目覚めRETURNER Type R版
+  - 觉醒电音R版
+  - 愛電音R
   duration: 260.76
   weight: 1.0
   enabled: true
@@ -1021,6 +1353,14 @@ songs:
   - Mezame RETURNER Electric Returner
   - 电音版
   - 爱电音版
+  - 电音
+  - 电音觉醒
+  - 觉醒电音版
+  - 电音RETURNER
+  - RETURNER电音版
+  - 电音僵尸
+  - 電音版
+  - 觉醒吧RETURNER Electric Returner
   duration: 259.12
   weight: 1.0
   enabled: true
@@ -1046,6 +1386,15 @@ songs:
   - Mezame RETURNER
   - RETURNER
   - 法兰秀秀第一首偶像曲
+  - 觉醒
+  - 觉醒吧
+  - 目觉
+  - 目覚
+  - 覺醒
+  - 目醒
+  - 觉醒原版
+  - 觉醒吧RETURNER原版
+  - 目覚めRETURNER原版
   duration: 261.36
   weight: 1.0
   enabled: true
@@ -1070,6 +1419,15 @@ songs:
   - 悠久ネバダイ
   - Yuukyuu Never Die
   - Yūkyū Never Die
+  - 悠久
+  - 不死
+  - 永不死
+  - 永不消亡
+  - 永不消逝
+  - 悠久永不死
+  - 悠久不灭
+  - 悠久不滅
+  - Never Die
   duration: 291.64
   weight: 1.0
   enabled: true

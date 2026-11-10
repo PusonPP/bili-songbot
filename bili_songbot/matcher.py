@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import re
 import unicodedata
 from dataclasses import dataclass
 from typing import Iterable
@@ -29,25 +28,33 @@ class SongMatcher:
         fuzzy_score_cutoff: int = 90,
     ):
         self.songs = [s for s in songs if s.enabled]
-        self.command_prefixes = [self.normalize(x) for x in command_prefixes]
+        self.command_prefixes = sorted(
+            {self.normalize(x) for x in command_prefixes if self.normalize(x)},
+            key=lambda x: (-len(x), x),
+        )
         self.allow_direct_alias = allow_direct_alias
         self.fuzzy_min_alias_len = fuzzy_min_alias_len
         self.fuzzy_score_cutoff = fuzzy_score_cutoff
         self.alias_to_song: dict[str, Song] = {}
+        self._song_id_aliases = {self.normalize(song.song_id) for song in self.songs}
         self._build_index()
 
     @staticmethod
     def normalize(text: str) -> str:
-        text = unicodedata.normalize("NFKC", text or "").strip().lower()
-        text = re.sub(r"\s+", "", text)
-        text = re.sub(r"[，。！？、,.!?;；:：\[\]（）()【】《》<>\"'`~]+", "", text)
-        return text
+        text = unicodedata.normalize("NFKC", text or "").casefold()
+        return "".join(
+            char for char in text
+            if not char.isspace()
+            and not unicodedata.category(char).startswith("P")
+            and unicodedata.category(char) != "Cf"
+            and char not in "~<>"
+        )
 
     def _build_index(self) -> None:
         conflicts: dict[str, list[str]] = {}
         for song in self.songs:
             aliases = set(song.aliases + [song.display_name, song.song_id])
-            for alias in aliases:
+            for alias in sorted(aliases):
                 key = self.normalize(alias)
                 if not key:
                     continue
@@ -60,14 +67,23 @@ class SongMatcher:
             raise ValueError(f"歌曲别名冲突，请修改 config/songs.yaml：{pairs}")
 
     def extract_request_text(self, text: str) -> str | None:
-        raw = text.strip()
+        raw = "".join(
+            char for char in unicodedata.normalize("NFKC", text or "").casefold()
+            if unicodedata.category(char) != "Cf"
+        ).strip()
         normalized = self.normalize(raw)
         if not normalized:
             return None
 
         for prefix in self.command_prefixes:
-            if normalized.startswith(prefix):
-                rest = normalized[len(prefix):]
+            if raw.startswith(prefix):
+                rest = raw[len(prefix):]
+                # Keep full English words and IDs such as songbird/song_026 intact.
+                if prefix.isascii() and rest and (
+                    rest[0] == "_" or (rest[0].isascii() and rest[0].isalpha())
+                ):
+                    continue
+                rest = self.normalize(rest)
                 return rest or None
 
         return normalized if self.allow_direct_alias else None
@@ -83,29 +99,39 @@ class SongMatcher:
         if len(candidate) < self.fuzzy_min_alias_len:
             return MatchResult(None, "not_found", "短代号不启用模糊匹配")
 
-        best: tuple[int, Song, str] | None = None
-        second: tuple[int, Song, str] | None = None
+        if candidate.isdecimal() or (candidate.startswith("song") and candidate[4:].isdecimal()):
+            return MatchResult(None, "not_found", "未找到歌曲编号")
+
+        # Rank distinct songs, not aliases: synonyms must not hide ambiguity.
+        scores: dict[str, tuple[int, Song, str]] = {}
         for alias, song in self.alias_to_song.items():
-            if len(alias) < self.fuzzy_min_alias_len:
+            if len(alias) < self.fuzzy_min_alias_len or alias.isdecimal():
                 continue
-            score = max(fuzz.ratio(candidate, alias), fuzz.partial_ratio(candidate, alias))
+            if alias in self._song_id_aliases:
+                continue
+            # Only the request may be a title fragment, not the other way round.
+            # This avoids treating a whole chat sentence containing a keyword as a request.
+            score = 100 if candidate in alias else fuzz.ratio(candidate, alias)
             item = (int(score), song, alias)
-            if best is None or item[0] > best[0]:
-                second = best
-                best = item
-            elif second is None or item[0] > second[0]:
-                second = item
+            previous = scores.get(song.song_id)
+            if previous is None or item[0] > previous[0]:
+                scores[song.song_id] = item
+
+        ranked = sorted(scores.values(), key=lambda item: (-item[0], item[1].song_id))
+        best = ranked[0] if ranked else None
 
         if best is None or best[0] < self.fuzzy_score_cutoff:
             return MatchResult(None, "not_found", "未找到歌曲", best[0] if best else 0)
 
-        if second and second[0] >= self.fuzzy_score_cutoff and second[1].song_id != best[1].song_id:
+        matches = [item for item in ranked if item[0] >= self.fuzzy_score_cutoff]
+        if len(matches) > 1:
+            choices = "、".join(f"{song.song_id} {song.display_name}" for _, song, _ in matches[:3])
             return MatchResult(
                 None,
                 "ambiguous",
-                "代号不明确",
+                f"代号不明确，请用完整歌名或编号：{choices}",
                 best[0],
-                [best[1].display_name, second[1].display_name],
+                [song.display_name for _, song, _ in matches],
             )
 
         return MatchResult(best[1], "fuzzy", f"模糊命中：{best[2]}", best[0])
