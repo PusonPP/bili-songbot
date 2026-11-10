@@ -1,0 +1,103 @@
+# Corrections to user-supplied text. Line numbers count nonempty lyric occurrences.
+# Full source lyrics, audio and generated subtitles stay outside Git.
+version: 1
+titles:
+  song_005: Never ending saga
+  song_008: To My Dearest
+  song_009: We are FranChouChou!
+  song_016: Drive-in Tori（フランシュシュver.）
+  song_025: 谢谢你 现在与未来
+  song_026: 如果今天将被铭刻于历史
+  song_030: 宣誓！ALIVE センセーション
+corrections:
+  song_001:
+    - {line: 3, before: 解けかけし慣れたポニーテール, original: 解けかけ枝垂れたポニーテール, translation: 快要松散、低低垂下的马尾辫}
+    - {line: 6, before: 綺麗に揃えて見せたが, original: きれいに揃えてみせたわ, translation: 我会把它们整整齐齐地摆好给你看}
+    - {line: 16, before: 君と出会う前の自分に, translation: 回到遇见你之前的自己}
+    - {line: 17, before: 戻れる気がした29時, translation: 凌晨五点，仿佛还能回到那时}
+    - {line: 20, before: かさぶたになって慣れないいたずらは, original: カサブタにだって成れない悪戯は, translation: 那连伤痂都结不成的恶作剧}
+  song_002:
+    - {line: 28, before: 言葉にならないほど, translation: 到了无法用言语表达的程度}
+  song_003:
+    - {line: 2, before: アイドル首とれんやろ？, translation: 偶像哪有脑袋会掉下来的？}
+  song_006:
+    - {line: 6, before: '身の丈？ スカートは膝丈って (out of date)', translation: '要安分守己？裙子非得到膝盖？（早就过时了）'}
+  song_007:
+    - {line: 34, before: 贖罪の 幸福の 撤退の 撤回を 革命の 作戦の 団結の 続行を, translation: 撤回对赎罪与幸福的退却，让革命、作战与团结继续}
+  song_008:
+    - {line: 24, before: 貰った勇気は誇りに進むから, translation: 我会以你给予的勇气为荣，继续向前}
+  song_012:
+    - {line: 37, before: 限界突破って, translation: 冲破极限}
+    - {line: 44, before: L can do it, original: I can do it, translation: 我能做到}
+  song_014:
+    - {line: 2, before: どこでんがっぱたのしかどっさい, translation: 到哪儿都有一大堆乐趣}
+    - {line: 4, before: どこでんがっぱたのしかどっさい, translation: 到哪儿都有一大堆乐趣}
+    - {line: 9, before: 限界まで味わうの玄界灘, translation: 尽情品味玄界滩，直到极限}
+    - {line: 14, before: 海を見ながらルートはグランブルー, translation: 望着大海，沿着Grand Blue滨海公路前行}
+    - {line: 15, before: からのけえらん（けえらん）, translation: 再尝尝唐津米皮豆沙卷（けえらん）}
+    - {line: 17, before: マダイツガニ車エビ, translation: 真鲷、河蟹、日本对虾}
+    - {line: 31, before: どこでんがっぱたのしかどっさい, translation: 到哪儿都有一大堆乐趣}
+    - {line: 33, before: どこでんがっぱたのしかどっさい, translation: 到哪儿都有一大堆乐趣}
+    - {line: 49, before: 松露（しょうろ）（饅頭）みやげ （饅頭）, translation: 松露馒头（豆沙点心），带作伴手礼（馒头）}
+    - {line: 50, before: 万齢（まんれい）おおちうすにごり, translation: 万龄、相知薄浊烧酎}
+    - {line: 84, before: どこでんがっぱたのしかどっさい, translation: 到哪儿都有一大堆乐趣}
+    - {line: 86, before: どこでんがっぱたのしかどっさい, translation: 到哪儿都有一大堆乐趣}
+  song_016:
+    - {line: 6, before: 鳥で満腹, translation: 在Tori吃个饱}
+    - {line: 12, before: ドライブイン鳥!, translation: Drive-in Tori！}
+  song_017:
+    - {line: 21, before: Ah 席場へ 窓際 飛行機雲, original: Ah 席替え 窓際 飛行機雲}
+    - {line: 27, before: こっぞて混ざってまくらんげ, original: こぞって混ざって枕投げ}
+    - {line: 29, before: とくっつ助けたいよね（なんて）, original: そーっとくっつけたいよね（なんて）}
+    - {line: 32, before: 射止め茶いなラッキチャンス（ありおり）, original: 射止めちゃいなラッキーチャンス（ありおり）}
+    - {line: 33, before: 掴み取れハッピライフ（有り）, original: 掴み取れハッピーラブ（はべり）, translation: 抓住幸福的恋爱吧（haberi）}
+    - {line: 34, before: 倫理定理ブンド回じゃ鳩のドキドキ測れない, original: 倫理定理分度器じゃハートのドキドキ測れない}
+    - {line: 36, before: するよりも愛巨大（無限に）, original: するよりも愛嬌だ（無限に）, translation: 不如尽情展现亲切可爱的魅力（无限大）}
+    - {line: 39, before: 今日もトレド幕で, original: 今日もトレードマークで, translation: 今天也用我那标志性的发饰}
+    - {line: 41, before: 小服を呼ぶ相手みが私の味方, original: 幸福を呼ぶアイテムが私の味方, translation: 带来幸福的小物件是我的伙伴}
+    - {line: 47, before: '突き進めハッピーデイズ (A, B, C!à', original: '突き進めハッピーデイズ (A, B, C!)'}
+  song_019:
+    - {line: 18, before: 意思も自由も その身を投げて, translation: 为意志与自由挺身而出}
+  song_020:
+    - {line: 25, before: 虹の待つ場所 呼ぶこえに（呼ばれ）, translation: 在彩虹等待的地方，听见呼唤（呼子在呼唤）}
+    - {line: 26, before: 'イカなくちゃ 人類ならば (ho) 頬張れ', translation: '身为人类，怎能不去尝尝乌贼（ho）尽情大快朵颐'}
+    - {line: 27, before: '嬉しーのって 温泉気分の (yeah)', translation: '好开心呀，仿佛泡在嬉野温泉里（yeah）'}
+    - {line: 28, before: ぬくもりサガせば（誉れ）, translation: 在佐贺寻找这份温暖（荣光）}
+    - {line: 29, before: '永劫未来は100万カラッツ (fu)', translation: '永恒的未来闪耀百万克拉，唐津的光彩（fu）'}
+  song_021:
+    - {line: 31, before: 一世一代の賭けるは続いてく, original: 一世一代の賭けは続いてく}
+  song_024:
+    - {line: 5, before: 命の美しさ そして儚さと, translation: 生命的美丽，还有它的短暂易逝}
+  song_028:
+    - {line: 30, before: 五臓六腑カラカラに (日照り), translation: 五脏六腑干渴难耐（如逢旱日）}
+  song_029:
+    - {line: 41, before: その性（サガ） ギラ ギラ ギラ, translation: 那份本性（SAGA）闪闪发光}
+    - {line: 42, before: 湧き上がる性（サガ）を出し尽くせ, translation: 把内心涌动的本性（SAGA）全部释放}
+  song_030:
+    - {line: 23, before: 平和だった 頃の記憶, translation: 那些平静日子的记忆}
+  song_034:
+    - {line: 22, before: まだまだこんなもんじゃねえ ふざけんじねえ, original: まだまだこんなもんじゃねえ ふざけんじゃねえ}
+  song_035:
+    - {line: 18, before: どうしょうもない不安や, original: どうしようもない不安や}
+  song_036:
+    - {line: 1, before: せーロ, original: せーの}
+    - {line: 13, before: マンボもマンボを踊りだして, original: マンボウもマンボを踊りだして, translation: 连翻车鱼也跳起了曼波舞}
+    - {line: 26, before: 上前 上前（ゆーまー）, original: UMA UMA（ゆーまー）}
+    - {line: 27, before: 友達に ハツ! なれるかな ハツ！, original: 友達に ハッ! なれるかな ハッ！, translation: 能不能交个朋友呢？哈！哈！}
+  song_037:
+    - {line: 10, before: 火が沈んでも踏み出そう, original: 日が沈んでも踏み出そう}
+    - {line: 13, before: 今は 先を行こう 細やかな強かりで, original: 今は 先を行こう ささやかな強がりで, translation: 此刻先向前走吧，带着小小的逞强}
+  song_039:
+    - {line: 24, before: 素敵ワクワクなほど超大大大, translation: 美妙得令人心动，请给我更多更多}
+    - {line: 41, before: やる気 ソワソワなほど超大大大..., translation: 干劲满满，跃跃欲试，请给我更多更多……}
+    - {line: 51, before: 素敵ワクワクなほど超大大大, translation: 美妙得令人心动，请给我更多更多}
+  song_040:
+    - {line: 26, before: 素敵ワクワクなほど超大大大, translation: 美妙得令人心动，请给我更多更多}
+    - {line: 43, before: やる気 ソワソワなほど超大大大, translation: 干劲满满，跃跃欲试，请给我更多更多}
+    - {line: 61, before: 素敵ワクワクなほど超大大大, translation: 美妙得令人心动，请给我更多更多}
+  song_041:
+    - {line: 24, before: 素敵ワクワクなほど超大大大, translation: 美妙得令人心动，请给我更多更多}
+    - {line: 41, before: やる気 ソワソワなほど超大大大, translation: 干劲满满，跃跃欲试，请给我更多更多}
+    - {line: 51, before: 素敵ワクワクなほど超大大大, translation: 美妙得令人心动，请给我更多更多}
+  song_042:
+    - {line: 22, before: 劣勢 達成やっちまいな, translation: 纵处劣势也要达成目标，放手去干吧}

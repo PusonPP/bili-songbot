@@ -120,7 +120,8 @@ class SongbotApp:
         logger.info("开始播放：%s offset=%.3f", song.display_name, start_offset)
 
         half = self.cfg.stream.transition_half_seconds if song.transition_policy.enabled else 0.0
-        safe_end = max(start_offset, song.duration - half) if song.duration > half * 2 else song.duration
+        # Transitions are silent previews, not part of either song's timeline.
+        safe_end = song.duration
         pos = max(0.0, start_offset)
         while pos < safe_end - 0.05:
             snapshot = await self.queue.snapshot()

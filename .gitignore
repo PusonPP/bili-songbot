@@ -42,6 +42,8 @@ biliup-cookies.json
 *.trace.zip
 
 # Media libraries and rendered videos are managed outside Git.
+media/lyrics/
+*.flac
 media/normalized/*
 media/cache/*
 media/transition/*

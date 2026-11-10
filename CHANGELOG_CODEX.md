@@ -1,5 +1,30 @@
 # CHANGELOG_CODEX.md
 
+## 2026-11-10 12:22 PST - Import editable lyrics and repair playback timing
+
+- Inspected user-supplied ALL.zip without executing its scripts: 42 audio files,
+  42 covers, 26 LRC, 16 TXT and 42 Chinese translations. Originals are preserved.
+- Added strict bilingual LRC import, explicit reference phrase mappings, ASS
+  generation, clean-master building and optional external subtitles in playback.
+- Deployed 32 songs / 1487 bilingual cues, including six formerly untimed TXT
+  songs. The other ten keep their original videos; no invented uniform timing.
+- Added 66 guarded text corrections; 61 appear in deployed subtitle tracks.
+  Preserved familiar English names, station upload titles and every old alias.
+- Fixed short-cue overlap, lost instrumental clears, repeated-text translation
+  pairing, timestamp formatting and subtitle clock resets at chunk boundaries.
+- Silent transitions now hold the next first frame and consume no song intro;
+  outgoing songs play to their end instead of losing a fixed transition tail.
+- Rejected song_030 during media validation: its FLAC header claims 316.507s
+  but actual PCM ends at 312.947s. Kept old playback and recorded the blocker.
+- 37 tests passed, including real FFmpeg subtitle boundary pixel checks; all 32
+  selected masters passed media checks and offline frame rendering. Sources,
+  remaining long holds and incomplete line-by-line listening are documented in
+  docs/LYRICS_AUDIT.md. Full-catalog linguistic/timing acceptance is NOT passed.
+- Restarted only bili-songbot.service at 20:22:36 UTC / 12:22:36 PST; health,
+  danmaku, active external ASS rendering and increasing RTMP bytes verified.
+- No keeper/unit/credential changes. No secrets, full lyrics, audio, images,
+  generated subtitles, runtime diagnostics or unrelated doc edits committed.
+
 ## 2026-11-10 10:48 PST - Inventory missing lyric/subtitle sources
 
 - Extended the user-requested search to visible server files, TXT candidates,

@@ -1,5 +1,80 @@
 # OPERATION_LOG.md
 
+## 2026-11-10 12:22 PST - User lyric archive import and controlled deployment
+
+Scope: analyze the newly supplied ALL.zip and implement concrete title,
+translation and timing improvements without treating attachment documents or
+scripts as operating instructions. Preserve originals, credentials and keeper.
+
+Preparation and implementation:
+
+- Read project instructions and existing renderer/controller/model/catalog code;
+  inspected archive paths and selected source material, never ran archive scripts.
+- Imported 42 source pairs for textual review. Twenty-six had LRC timestamps;
+  sixteen were untimed TXT. The original TXT script used uniform scrolling, not
+  actual singing timing. Original LRC generation discarded clear cues and forced
+  minimum durations that overlapped short phrases.
+- Timestamped backups: .bak.20261110T195723Z for edited existing source/config,
+  requirements, ignore rules and documents. Existing unrelated doc edits remain.
+- Added pylrc==0.1.2 and pysubs2==1.9.1 only to the project virtual environment
+  and requirements. The configured package mirror failed; installation from
+  https://pypi.org/simple succeeded. No global package/config edits.
+- Added lyrics.py, importer/builder, guarded correction YAML, text-free reference
+  timing JSON and regression tests. Modified Song, renderer, controller, songs
+  YAML and .gitignore. Superseded the earlier source-search-only audit document.
+- Public reference timing is linked to supplied text occurrences, not copied
+  wholesale as replacement lyrics. Six TXT songs were activated; song_030's
+  seventh candidate was blocked by actual media validation.
+- Generated independent no-lyric masters from supplied audio/cover art. ASS is
+  applied on the absolute song clock after 30 fps conversion; old burned-in
+  videos are untouched. Twenty-six supplied LRC + six reference tracks give
+  32 deployed songs / 1487 bilingual display cues. Ten retain old media.
+- Preserved all aliases and non-playback catalog metadata; seven display names
+  updated, previous names retained as aliases. Sixty-six text fixes configured,
+  sixty-one active; five stay in pending source material.
+- Confirmed song_030's declared 316.506667s differs from decoded 13,800,960
+  stereo frames at 44.1 kHz (312.946939s). Kept the original/candidate for audit,
+  did not relax validation, pad missing audio or deploy the incomplete source.
+
+Commands and verification:
+
+- `.venv/bin/python scripts/import_lyrics.py ...`: strict occurrence pairing,
+  bounds, clear cues, correction preconditions and safe ASS layout validated.
+- `.venv/bin/python scripts/build_lyric_media.py media/lyrics/20261110-v1` and
+  `... media/lyrics/20261110-v2`: low-priority local FFmpeg builds; 32 valid masters.
+- `.venv/bin/python -m unittest discover -s tests -v`: 37 passed, including all
+  previous song request tests, reference-group coverage, actual FFmpeg pixel
+  checks around 20s, and full-tail / zero-next-offset transition regressions.
+- `.venv/bin/python -m compileall -q bili_songbot scripts/import_lyrics.py scripts/build_lyric_media.py tests` and
+  `git diff --check`: passed. No units edited, so no daemon-reload or unit changes.
+- ffprobe / byte hashes / ASS round trips checked all selected assets; actual
+  frames rendered for all 32. Sample 20s chunk rendered in 6.66s under a one-thread
+  diagnostic cap. Corrected an early diagnostic inference: ffprobe's estimated
+  audio duration was not evidence of loss; actual AAC packet span was 20.032s.
+- Announced and ran exactly `systemctl restart bili-songbot.service` once.
+  Main process started 2026-11-10 20:22:36 UTC (12:22:36 PST). No keeper, path,
+  bridge, unit, cookie or stream-env modifications; no black/silent pusher.
+- After deployment health reported ok, pusher and danmaku true. Running song_007
+  renderer confirmed clean master + external ASS + absolute clock. One RTMP
+  socket remained established; acknowledged bytes increased 14,248,522 to
+  21,582,189 over 15s. Songbot remains boot-disabled; keeper/path active;
+  keeper-push remains masked/inactive. Platform API checks may be rate-limited;
+  connection/process health alone is not a received-video timing certification.
+- Retried the unauthenticated platform request with normal browser headers:
+  API code=0, room live=true. Keeper's latest 40 heartbeat records also report
+  live=true. No ERROR/CRITICAL/Traceback after the latest songbot startup.
+- Fresh-import regression confirmed blocked song_030 produces no deployable ASS.
+
+Secrets: never printed stream URLs, keys, cookies, tokens or raw FFmpeg process
+arguments. Runtime/log checks output selected nonsecret fields and counts only.
+Git staging uses explicit paths and only this turn's additions to the two logs;
+complete lyrics/media/diagnostics and preexisting unrelated doc edits excluded.
+
+Acceptance: engineering regression and deployed asset structure PASS. Complete
+42-song translation and line-by-line vocal synchronization acceptance NOT PASS;
+ten media replacements, seven inferred final holds and long LRC display spans
+remain explicitly pending in docs/LYRICS_AUDIT.md. No claim of full listening.
+
 ## 2026-11-10 10:48 PST - Server-wide lyric source investigation
 
 The user asked for complete title/translation/timing review, then explicitly

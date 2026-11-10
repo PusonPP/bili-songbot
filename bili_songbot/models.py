@@ -25,6 +25,7 @@ class Song:
     notes: str = ""
     normalized_file_path: str = ""
     preprocessed_file_path: str = ""
+    lyrics_file_path: str = ""
     transition_policy: TransitionPolicy = field(default_factory=TransitionPolicy)
 
     @classmethod
@@ -42,6 +43,7 @@ class Song:
             notes=str(data.get("notes", "")),
             normalized_file_path=str(data.get("normalized_file_path", "")),
             preprocessed_file_path=str(data.get("preprocessed_file_path", "")),
+            lyrics_file_path=str(data.get("lyrics_file_path", "")),
             transition_policy=TransitionPolicy(
                 enabled=bool(tp.get("enabled", True)),
                 mode=str(tp.get("mode", "alpha_overlay")),

@@ -4,6 +4,7 @@ import asyncio
 import json
 import logging
 import os
+import re
 import subprocess
 from pathlib import Path
 
@@ -72,6 +73,26 @@ class FFmpegRenderer:
         s = self.cfg.stream
         return f"scale={s.output_width}:{s.output_height}:force_original_aspect_ratio=decrease,pad={s.output_width}:{s.output_height}:(ow-iw)/2:(oh-ih)/2,setsar=1,setdar=16/9,fps={s.fps},format=yuv420p"
 
+    def _song_video_filter(self, song: Song, start: float) -> str:
+        base = self._base_video_filter()
+        if not song.lyrics_file_path:
+            return f"[0:v]{base}[v]"
+        subtitles = self.cfg.abs_path(song.lyrics_file_path).resolve()
+        if not subtitles.is_file():
+            raise FileNotFoundError(f"Missing lyric subtitles: {song.song_id}")
+        if not re.fullmatch(r"[A-Za-z0-9_./-]+", str(subtitles)):
+            raise ValueError("Subtitle paths must use ASCII letters, digits, slash, dash or underscore")
+        # Seeking resets input timestamps. Evaluate ASS on the absolute song clock,
+        # then reset the output to a normal zero-based MPEG-TS chunk.
+        return (
+            f"[0:v]{base}[base];"
+            "[0:a]showfreqs=s=740x82:mode=bar:ascale=sqrt:fscale=log:"
+            "colors=0x59d6d6|0xf19db5:rate=30,format=rgba[freq];"
+            "[base][freq]overlay=x=460:y=594:shortest=1,"
+            f"setpts=PTS-STARTPTS+{start:.6f}/TB,"
+            f"ass=filename='{subtitles}',setpts=PTS-STARTPTS[v]"
+        )
+
     async def render_song_chunk(self, song: Song, start: float, duration: float, ui_png: Path) -> None:
         # ui_png is kept for backward-compatible call sites. Runtime UI is now drawn by pusher.
         if duration <= 0.05:
@@ -92,12 +113,13 @@ class FFmpegRenderer:
             "-i",
             str(src),
             "-filter_complex",
-            f"[0:v]{self._base_video_filter()}[v]",
+            self._song_video_filter(song, start),
             "-map",
             "[v]",
             "-map",
             "0:a:0?",
-            "-shortest",
+            "-t",
+            f"{duration:.3f}",
             *self._encoding_args(),
         ]
         await self._run_and_push(cmd, f"song_chunk {song.song_id} {start:.3f}+{duration:.3f}")
@@ -122,20 +144,21 @@ class FFmpegRenderer:
         reveal_at = float(os.environ.get("TRANSITION_REVEAL_AT", "1.60"))
         reveal_at = max(0.0, min(reveal_at, max(0.05, total - 0.05)))
         next_visible = max(0.05, total - reveal_at)
-        self.last_transition_next_visible = next_visible
+        self.last_transition_next_visible = 0.0
 
-        # Use previous-song tail as background, then freeze its last frame until reveal_at.
-        tail = min(total, max(0.25, prev_song.duration / 3))
+        # A silent transition must not consume any of the next song's audio.
+        # Hold preview frames; the next song starts at zero after the reveal.
+        tail = min(2.0, prev_song.duration)
         prev_start = max(0.0, prev_song.duration - tail)
-        prev_pad = max(0.0, total - tail)
-        delay_ms = int(round(reveal_at * 1000))
         vf = self._base_video_filter()
 
         filter_complex = (
-            f"[0:v]{vf},setpts=PTS-STARTPTS,"
-            f"tpad=stop_mode=clone:stop_duration={prev_pad:.3f},"
+            f"[0:v]{vf},reverse,trim=end_frame=1,setpts=PTS-STARTPTS,"
+            f"tpad=stop_mode=clone:stop_duration={total:.3f},"
             f"trim=duration={total:.3f},setpts=PTS-STARTPTS[prevbg];"
-            f"[1:v]{vf},trim=duration={next_visible:.3f},"
+            f"[1:v]{vf},trim=end_frame=1,setpts=PTS-STARTPTS,"
+            f"tpad=stop_mode=clone:stop_duration={next_visible:.3f},"
+            f"trim=duration={next_visible:.3f},"
             f"setpts=PTS-STARTPTS+{reveal_at:.3f}/TB[nextv];"
             f"[prevbg][nextv]overlay=0:0:enable='gte(t,{reveal_at:.3f})'[bg];"
             f"[2:v]scale={s.output_width}:{s.output_height}:flags=lanczos,"
@@ -160,7 +183,7 @@ class FFmpegRenderer:
             "-ss",
             "0",
             "-t",
-            f"{next_visible:.3f}",
+            "1.000",
             "-i",
             str(next_src),
             "-stream_loop",
@@ -175,7 +198,8 @@ class FFmpegRenderer:
             "[v]",
             "-map",
             "[a]",
-            "-shortest",
+            "-t",
+            f"{total:.3f}",
             *self._encoding_args(),
         ]
         logger.info(
