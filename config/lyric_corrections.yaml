@@ -20,12 +20,20 @@ corrections:
     - {line: 28, before: 言葉にならないほど, translation: 到了无法用言语表达的程度}
   song_003:
     - {line: 2, before: アイドル首とれんやろ？, translation: 偶像哪有脑袋会掉下来的？}
+  song_005:
+    - {line: 18, before: いつの日が断罪に遭う聖者のように, original: いつの日か断罪に遭う聖者のように}
   song_006:
     - {line: 6, before: '身の丈？ スカートは膝丈って (out of date)', translation: '要安分守己？裙子非得到膝盖？（早就过时了）'}
   song_007:
-    - {line: 34, before: 贖罪の 幸福の 撤退の 撤回を 革命の 作戦の 団結の 続行を, translation: 撤回对赎罪与幸福的退却，让革命、作战与团结继续}
+    - {line: 34, before: 贖罪の 幸福の 撤退の 撤回を 革命の 作戦の 団結の 続行を, original: 贖罪の 降伏の 撤退の 撤回を 革命の 作戦の 団結の 続行を, translation: 撤回赎罪、投降与撤退，继续革命、作战与团结}
   song_008:
-    - {line: 24, before: 貰った勇気は誇りに進むから, translation: 我会以你给予的勇气为荣，继续向前}
+    - {line: 24, before: 貰った勇気は誇りに進むから, original: もらった勇気を誇りに進むから, translation: 我会以你给予的勇气为荣，继续向前}
+  song_010:
+    - {line: 34, before: (げげげげっだーん), translation: （跟着节奏舞起来，Get down）}
+    - {line: 50, before: 'Hurry up!　後悔だってバネにして', translation: '快一点！连后悔也化作前进的动力'}
+    - {line: 51, before: 謳え！　たとえこの声　枯れても, translation: 高歌吧！即使唱到声音嘶哑}
+    - {line: 85, before: 'Hurry up!　後悔だってバネにして', translation: '快一点！连后悔也化作前进的动力'}
+    - {line: 86, before: 謳え！　たとえこの声　枯れても, translation: 高歌吧！即使唱到声音嘶哑}
   song_012:
     - {line: 37, before: 限界突破って, translation: 冲破极限}
     - {line: 44, before: L can do it, original: I can do it, translation: 我能做到}
@@ -43,9 +51,12 @@ corrections:
     - {line: 84, before: どこでんがっぱたのしかどっさい, translation: 到哪儿都有一大堆乐趣}
     - {line: 86, before: どこでんがっぱたのしかどっさい, translation: 到哪儿都有一大堆乐趣}
   song_016:
+    - {line: 4, before: 4い健康, translation: 身体健康}
+    - {line: 5, before: 5もニコニコ, translation: 总是笑眯眯}
     - {line: 6, before: 鳥で満腹, translation: 在Tori吃个饱}
     - {line: 12, before: ドライブイン鳥!, translation: Drive-in Tori！}
   song_017:
+    - {line: 7, before: スカーフ結んで駆け抜ける, translation: 系好领巾就向前飞奔}
     - {line: 21, before: Ah 席場へ 窓際 飛行機雲, original: Ah 席替え 窓際 飛行機雲}
     - {line: 27, before: こっぞて混ざってまくらんげ, original: こぞって混ざって枕投げ}
     - {line: 29, before: とくっつ助けたいよね（なんて）, original: そーっとくっつけたいよね（なんて）}
@@ -58,6 +69,8 @@ corrections:
     - {line: 47, before: '突き進めハッピーデイズ (A, B, C!à', original: '突き進めハッピーデイズ (A, B, C!)'}
   song_019:
     - {line: 18, before: 意思も自由も その身を投げて, translation: 为意志与自由挺身而出}
+    - {line: 20, before: 涙も 血も無い 神話を, translation: 那没有泪也没有血的神话}
+    - {line: 21, before: 築くまで, translation: 直到亲手筑成为止}
   song_020:
     - {line: 25, before: 虹の待つ場所 呼ぶこえに（呼ばれ）, translation: 在彩虹等待的地方，听见呼唤（呼子在呼唤）}
     - {line: 26, before: 'イカなくちゃ 人類ならば (ho) 頬張れ', translation: '身为人类，怎能不去尝尝乌贼（ho）尽情大快朵颐'}
@@ -65,7 +78,27 @@ corrections:
     - {line: 28, before: ぬくもりサガせば（誉れ）, translation: 在佐贺寻找这份温暖（荣光）}
     - {line: 29, before: '永劫未来は100万カラッツ (fu)', translation: '永恒的未来闪耀百万克拉，唐津的光彩（fu）'}
   song_021:
+    - {line: 5, before: 無垢で眩しい あの瞳には, translation: 那双纯真而耀眼的眼眸}
+    - {line: 6, before: 戻れないけれど, translation: 虽然已经无法再找回}
     - {line: 31, before: 一世一代の賭けるは続いてく, original: 一世一代の賭けは続いてく}
+  song_022:
+    - {line: 4, before: 清きかは喜びとやすらぎを包む, original: 清き川 喜びとやすらぎを包む}
+  song_023:
+    - {line: 5, before: This my way 朽ち果てる, original: This is my way 朽ち果てても前進, translation: 这就是我的路，即使腐朽也要前进}
+    - {line: 6, before: 'でも全身 Wake Up! Just like this', original: 'Wake Up! Just like this', translation: '醒来吧！就像这样'}
+    - {line: 12, before: 奏でよう 荒ぶる魂, original: 奏でろ 荒ぶる魂, translation: 奏响这狂放的灵魂}
+    - {line: 20, before: 今ぶち壊すそらはmyself, original: 今ぶち壊すそれはmyself, translation: 此刻要突破的，正是我自己}
+    - {line: 23, before: 'Yeah! to the brave そう 胸のFlame', original: 'Yeah! to be brave そう 胸のFlame', translation: '勇敢起来！没错，胸中的火焰'}
+    - {line: 25, before: 'Yeah! to the brave そう 胸のFlame', original: 'Yeah! to be brave そう 胸のFlame', translation: '勇敢起来！没错，胸中的火焰'}
+    - {line: 32, before: ヤバイぐらい 時代はドライ, translation: 这个时代冷漠得可怕}
+    - {line: 48, before: 奪い取れ恐れずにDie!!!, original: 奪い取れ恐れずにDive!!!, translation: 就去夺取吧，毫不畏惧地纵身跃入！}
+    - {line: 49, before: 'Here we go! 叫びだせ ボスた', original: 'Here we go! 叫びだせ Busta', translation: '来吧！吼出来，Busta！'}
+    - {line: 56, before: 奏でよう 荒ぶる魂, original: 奏でろ 荒ぶる魂, translation: 奏响这狂放的灵魂}
+    - {line: 64, before: 今ぶち壊すそらはmyself, original: 今ぶち壊すそれはmyself, translation: 此刻要突破的，正是我自己}
+    - {line: 67, before: 'Yeah! to the brave そう 胸のFlame', original: 'Yeah! to be brave そう 胸のFlame', translation: '勇敢起来！没错，胸中的火焰'}
+    - {line: 69, before: 'Yeah! to the brave そう 胸のFlame', original: 'Yeah! to be brave そう 胸のFlame', translation: '勇敢起来！没错，胸中的火焰'}
+    - {line: 71, before: 'Yeah! to the brave そう 胸のFlame', original: 'Yeah! to be brave そう 胸のFlame', translation: '勇敢起来！没错，胸中的火焰'}
+    - {line: 73, before: 'Yeah! to the brave そう 胸のFlame', original: 'Yeah! to be brave そう 胸のFlame', translation: '勇敢起来！没错，胸中的火焰'}
   song_024:
     - {line: 5, before: 命の美しさ そして儚さと, translation: 生命的美丽，还有它的短暂易逝}
   song_028:
@@ -76,17 +109,28 @@ corrections:
   song_030:
     - {line: 23, before: 平和だった 頃の記憶, translation: 那些平静日子的记忆}
   song_034:
+    - {line: 15, before: どうしようもない不安や孤独を感じた時, translation: 当我感到无可奈何的不安与孤独时}
     - {line: 22, before: まだまだこんなもんじゃねえ ふざけんじねえ, original: まだまだこんなもんじゃねえ ふざけんじゃねえ}
   song_035:
-    - {line: 18, before: どうしょうもない不安や, original: どうしようもない不安や}
+    - {line: 18, before: どうしょうもない不安や, original: どうしようもない不安や, translation: 当我感到无可奈何的不安}
   song_036:
     - {line: 1, before: せーロ, original: せーの}
     - {line: 13, before: マンボもマンボを踊りだして, original: マンボウもマンボを踊りだして, translation: 连翻车鱼也跳起了曼波舞}
+    - {line: 19, before: クラリン, translation: 咕啦哩}
     - {line: 26, before: 上前 上前（ゆーまー）, original: UMA UMA（ゆーまー）}
     - {line: 27, before: 友達に ハツ! なれるかな ハツ！, original: 友達に ハッ! なれるかな ハッ！, translation: 能不能交个朋友呢？哈！哈！}
   song_037:
     - {line: 10, before: 火が沈んでも踏み出そう, original: 日が沈んでも踏み出そう}
     - {line: 13, before: 今は 先を行こう 細やかな強かりで, original: 今は 先を行こう ささやかな強がりで, translation: 此刻先向前走吧，带着小小的逞强}
+  song_038:
+    - {line: 1, before: 綺麗な花で, original: 花咲く、美しさ, translation: 繁花盛开的美丽}
+    - {line: 2, before: 土地からの祝福, original: 大地の恵み, translation: 大地的恩泽}
+    - {line: 3, before: 喜びをもたらす結晶の川, original: 清き、川, translation: 清澈的河流}
+    - {line: 4, before: そしてどこでも平和, original: 喜びと安らぎを包む, translation: 包容着喜悦与安宁}
+    - {line: 5, before: すべての恐れを手放す, original: 恐れを、解き放ち, translation: 释放所有恐惧}
+    - {line: 6, before: 'そして、信仰を失わないでください', original: 信じる心, translation: 心中怀抱信念}
+    - {line: 7, before: 盾となる言葉で, original: 御言葉は盾となり, translation: 圣言化作盾牌}
+    - {line: 8, before: 生き生きと歌いましょう, original: 讃えよう命, translation: 赞颂生命吧}
   song_039:
     - {line: 24, before: 素敵ワクワクなほど超大大大, translation: 美妙得令人心动，请给我更多更多}
     - {line: 41, before: やる気 ソワソワなほど超大大大..., translation: 干劲满满，跃跃欲试，请给我更多更多……}
@@ -101,3 +145,5 @@ corrections:
     - {line: 51, before: 素敵ワクワクなほど超大大大, translation: 美妙得令人心动，请给我更多更多}
   song_042:
     - {line: 22, before: 劣勢 達成やっちまいな, translation: 纵处劣势也要达成目标，放手去干吧}
+    - {line: 34, before: 奪い去った, translation: 向那些夺走一切}
+    - {line: 35, before: 踏みにじる神へと逆天罰 生き様 知れ, translation: 肆意践踏的神还以天罚，让他们见识我们的活法}

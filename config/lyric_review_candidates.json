@@ -1,0 +1,1021 @@
+{
+  "song_003": {
+    "source_sha256": "c527f5d3c0c44b704dc4d4c7b83e4833ec705c39d8f319d571c173253ecfc1da",
+    "audio_duration": 141.693333,
+    "reference_cache_sha256": "1a60c42d21ae0c66d010b8c91caccb472720ea8b336cb25dffda596854b895d1",
+    "reference_song_id": 1406049059,
+    "method": "explicit_source_occurrence_groups_public_reference",
+    "blocked_reason": "candidate_only_native_listening_unavailable",
+    "listening_review": "not_performed",
+    "groups": [
+      {
+        "provided_lines": [
+          1,
+          2
+        ],
+        "start_ms": 1165
+      },
+      {
+        "provided_lines": [
+          3,
+          4
+        ],
+        "start_ms": 5150
+      },
+      {
+        "provided_lines": [
+          5
+        ],
+        "start_ms": 10484
+      },
+      {
+        "provided_lines": [
+          6,
+          7
+        ],
+        "start_ms": 14169
+      },
+      {
+        "provided_lines": [
+          8,
+          9
+        ],
+        "start_ms": 19096
+      },
+      {
+        "provided_lines": [
+          10,
+          11
+        ],
+        "start_ms": 23560
+      },
+      {
+        "provided_lines": [
+          12,
+          13
+        ],
+        "start_ms": 28668
+      },
+      {
+        "provided_lines": [
+          14
+        ],
+        "start_ms": 41245
+      },
+      {
+        "provided_lines": [
+          15
+        ],
+        "start_ms": 43415
+      },
+      {
+        "provided_lines": [
+          16
+        ],
+        "start_ms": 46410
+      },
+      {
+        "provided_lines": [
+          17
+        ],
+        "start_ms": 49434
+      },
+      {
+        "provided_lines": [
+          18,
+          19
+        ],
+        "start_ms": 62362
+      },
+      {
+        "provided_lines": [
+          20,
+          21
+        ],
+        "start_ms": 67237
+      },
+      {
+        "provided_lines": [
+          22,
+          23
+        ],
+        "start_ms": 72811
+      },
+      {
+        "provided_lines": [
+          24
+        ],
+        "start_ms": 77693
+      },
+      {
+        "provided_lines": [
+          25,
+          26
+        ],
+        "start_ms": 79246
+      },
+      {
+        "provided_lines": [
+          27,
+          28
+        ],
+        "start_ms": 82799
+      },
+      {
+        "provided_lines": [
+          29,
+          30
+        ],
+        "start_ms": 84947
+      },
+      {
+        "provided_lines": [
+          31
+        ],
+        "start_ms": 87744
+      },
+      {
+        "provided_lines": [
+          32
+        ],
+        "start_ms": 90602
+      },
+      {
+        "provided_lines": [
+          33
+        ],
+        "start_ms": 97667
+      },
+      {
+        "provided_lines": [
+          34
+        ],
+        "start_ms": 99496
+      },
+      {
+        "provided_lines": [
+          35,
+          36
+        ],
+        "start_ms": 101834
+      },
+      {
+        "provided_lines": [
+          37,
+          38
+        ],
+        "start_ms": 107163
+      },
+      {
+        "provided_lines": [
+          39,
+          40
+        ],
+        "start_ms": 112237
+      },
+      {
+        "provided_lines": [
+          41
+        ],
+        "start_ms": 118150
+      },
+      {
+        "provided_lines": [
+          42,
+          43
+        ],
+        "start_ms": 120518
+      },
+      {
+        "provided_lines": [
+          44,
+          45
+        ],
+        "start_ms": 125012
+      },
+      {
+        "provided_lines": [
+          46,
+          47
+        ],
+        "start_ms": 129109
+      },
+      {
+        "provided_lines": [
+          48
+        ],
+        "start_ms": 132502
+      }
+    ],
+    "clear_ms": [],
+    "warnings": [
+      "speaker_labels_removed",
+      "out_of_order_ambiguous_clear_not_reused",
+      "reference_contains_extra_repeated_word"
+    ]
+  },
+  "song_004": {
+    "source_sha256": "fa4e0f8c448eb5587e0d4afe067539b0b63da9e9bccb2fad176c45335f127657",
+    "audio_duration": 272.893333,
+    "reference_cache_sha256": "985bfea5474bf8b73692242323b0ba3a4b201af74cd4a590c967775c16eaec44",
+    "reference_song_id": 1406042011,
+    "method": "explicit_source_occurrence_groups_public_reference",
+    "blocked_reason": "candidate_only_native_listening_unavailable",
+    "listening_review": "not_performed",
+    "groups": [
+      {
+        "provided_lines": [
+          1
+        ],
+        "start_ms": 11780
+      },
+      {
+        "provided_lines": [
+          2
+        ],
+        "start_ms": 23460
+      },
+      {
+        "provided_lines": [
+          3
+        ],
+        "start_ms": 25880
+      },
+      {
+        "provided_lines": [
+          4
+        ],
+        "start_ms": 28520
+      },
+      {
+        "provided_lines": [
+          5
+        ],
+        "start_ms": 33900
+      },
+      {
+        "provided_lines": [
+          6
+        ],
+        "start_ms": 36670
+      },
+      {
+        "provided_lines": [
+          7
+        ],
+        "start_ms": 39290
+      },
+      {
+        "provided_lines": [
+          8
+        ],
+        "start_ms": 44650
+      },
+      {
+        "provided_lines": [
+          9
+        ],
+        "start_ms": 47060
+      },
+      {
+        "provided_lines": [
+          10
+        ],
+        "start_ms": 50350
+      },
+      {
+        "provided_lines": [
+          11
+        ],
+        "start_ms": 52730
+      },
+      {
+        "provided_lines": [
+          12
+        ],
+        "start_ms": 66400
+      },
+      {
+        "provided_lines": [
+          13
+        ],
+        "start_ms": 69420
+      },
+      {
+        "provided_lines": [
+          14
+        ],
+        "start_ms": 72080
+      },
+      {
+        "provided_lines": [
+          15
+        ],
+        "start_ms": 76450
+      },
+      {
+        "provided_lines": [
+          16
+        ],
+        "start_ms": 77440
+      },
+      {
+        "provided_lines": [
+          17
+        ],
+        "start_ms": 80330
+      },
+      {
+        "provided_lines": [
+          18
+        ],
+        "start_ms": 82550
+      },
+      {
+        "provided_lines": [
+          19,
+          20
+        ],
+        "start_ms": 84430
+      },
+      {
+        "provided_lines": [
+          21
+        ],
+        "start_ms": 98920
+      },
+      {
+        "provided_lines": [
+          22
+        ],
+        "start_ms": 101670
+      },
+      {
+        "provided_lines": [
+          23
+        ],
+        "start_ms": 104640
+      },
+      {
+        "provided_lines": [
+          24
+        ],
+        "start_ms": 109780
+      },
+      {
+        "provided_lines": [
+          25
+        ],
+        "start_ms": 111980
+      },
+      {
+        "provided_lines": [
+          26
+        ],
+        "start_ms": 115310
+      },
+      {
+        "provided_lines": [
+          27
+        ],
+        "start_ms": 118040
+      },
+      {
+        "provided_lines": [
+          28
+        ],
+        "start_ms": 131500
+      },
+      {
+        "provided_lines": [
+          29
+        ],
+        "start_ms": 134660
+      },
+      {
+        "provided_lines": [
+          30
+        ],
+        "start_ms": 137070
+      },
+      {
+        "provided_lines": [
+          31
+        ],
+        "start_ms": 141310
+      },
+      {
+        "provided_lines": [
+          32
+        ],
+        "start_ms": 142830
+      },
+      {
+        "provided_lines": [
+          33
+        ],
+        "start_ms": 145800
+      },
+      {
+        "provided_lines": [
+          34
+        ],
+        "start_ms": 147510
+      },
+      {
+        "provided_lines": [
+          35,
+          36
+        ],
+        "start_ms": 149600
+      },
+      {
+        "provided_lines": [
+          37
+        ],
+        "start_ms": 175500
+      },
+      {
+        "provided_lines": [
+          38
+        ],
+        "start_ms": 180820
+      },
+      {
+        "provided_lines": [
+          39
+        ],
+        "start_ms": 186000
+      },
+      {
+        "provided_lines": [
+          40
+        ],
+        "start_ms": 188660
+      },
+      {
+        "provided_lines": [
+          41
+        ],
+        "start_ms": 196890
+      },
+      {
+        "provided_lines": [
+          42
+        ],
+        "start_ms": 199500
+      },
+      {
+        "provided_lines": [
+          43
+        ],
+        "start_ms": 202420
+      },
+      {
+        "provided_lines": [
+          44
+        ],
+        "start_ms": 207210
+      },
+      {
+        "provided_lines": [
+          45
+        ],
+        "start_ms": 212460
+      },
+      {
+        "provided_lines": [
+          46,
+          47
+        ],
+        "start_ms": 214580
+      },
+      {
+        "provided_lines": [
+          48
+        ],
+        "start_ms": 218470
+      },
+      {
+        "provided_lines": [
+          49
+        ],
+        "start_ms": 220980
+      },
+      {
+        "provided_lines": [
+          50
+        ],
+        "start_ms": 223960
+      },
+      {
+        "provided_lines": [
+          51
+        ],
+        "start_ms": 227470
+      },
+      {
+        "provided_lines": [
+          52
+        ],
+        "start_ms": 229360
+      },
+      {
+        "provided_lines": [
+          53
+        ],
+        "start_ms": 232190
+      },
+      {
+        "provided_lines": [
+          54
+        ],
+        "start_ms": 234430
+      },
+      {
+        "provided_lines": [
+          55,
+          56
+        ],
+        "start_ms": 236270
+      },
+      {
+        "provided_lines": [
+          57
+        ],
+        "start_ms": 250420
+      }
+    ],
+    "clear_ms": [
+      5260
+    ],
+    "warnings": [
+      "reference_duration_difference_not_applied_as_global_offset"
+    ]
+  },
+  "song_016": {
+    "source_sha256": "5059c661e8d940184b77bb6c029d4716bfae5e1e9cf2a18a3ed84dc6eb27dfc1",
+    "audio_duration": 23.866667,
+    "reference_cache_sha256": "aa14cb4adc9c4abb39d11ff9da6c45e6149bd5346c3f56f6a13947f16d88af75",
+    "reference_song_id": 1406041999,
+    "method": "explicit_source_occurrence_groups_public_reference",
+    "blocked_reason": "candidate_only_native_listening_unavailable",
+    "listening_review": "not_performed",
+    "groups": [
+      {
+        "provided_lines": [
+          1
+        ],
+        "start_ms": 2553
+      },
+      {
+        "provided_lines": [
+          2
+        ],
+        "start_ms": 3515
+      },
+      {
+        "provided_lines": [
+          3
+        ],
+        "start_ms": 4420
+      },
+      {
+        "provided_lines": [
+          4
+        ],
+        "start_ms": 5731
+      },
+      {
+        "provided_lines": [
+          5,
+          6,
+          7
+        ],
+        "start_ms": 6389
+      },
+      {
+        "provided_lines": [
+          8
+        ],
+        "start_ms": 11337
+      },
+      {
+        "provided_lines": [
+          9
+        ],
+        "start_ms": 13223
+      },
+      {
+        "provided_lines": [
+          10,
+          11
+        ],
+        "start_ms": 14328
+      },
+      {
+        "provided_lines": [
+          12
+        ],
+        "start_ms": 17750
+      }
+    ],
+    "clear_ms": [
+      2122,
+      19288
+    ],
+    "warnings": [
+      "reference_duration_difference_not_applied_as_global_offset"
+    ]
+  },
+  "song_023": {
+    "source_sha256": "0190b51ac9e497e89f3634b67f8ba3f20abdd6a352509fa18b9586c18746b978",
+    "audio_duration": 249.426667,
+    "reference_cache_sha256": "933acc647682ebdbf6bd4cd475e9c2e654c870e92415ff2b1f6fe9a015310313",
+    "reference_song_id": 1983527333,
+    "method": "explicit_source_occurrence_groups_public_reference",
+    "blocked_reason": "candidate_only_native_listening_unavailable",
+    "listening_review": "not_performed",
+    "groups": [
+      {
+        "provided_lines": [
+          1
+        ],
+        "start_ms": 20080
+      },
+      {
+        "provided_lines": [
+          2
+        ],
+        "start_ms": 22435
+      },
+      {
+        "provided_lines": [
+          3
+        ],
+        "start_ms": 24291
+      },
+      {
+        "provided_lines": [
+          4
+        ],
+        "start_ms": 26697
+      },
+      {
+        "provided_lines": [
+          5
+        ],
+        "start_ms": 29015
+      },
+      {
+        "provided_lines": [
+          6
+        ],
+        "start_ms": 31915
+      },
+      {
+        "provided_lines": [
+          7,
+          8
+        ],
+        "start_ms": 33348
+      },
+      {
+        "provided_lines": [
+          9
+        ],
+        "start_ms": 35619
+      },
+      {
+        "provided_lines": [
+          10
+        ],
+        "start_ms": 37180
+      },
+      {
+        "provided_lines": [
+          11
+        ],
+        "start_ms": 41700
+      },
+      {
+        "provided_lines": [
+          12
+        ],
+        "start_ms": 46737
+      },
+      {
+        "provided_lines": [
+          13,
+          14
+        ],
+        "start_ms": 51060
+      },
+      {
+        "provided_lines": [
+          15,
+          16
+        ],
+        "start_ms": 55681
+      },
+      {
+        "provided_lines": [
+          17
+        ],
+        "start_ms": 59674
+      },
+      {
+        "provided_lines": [
+          18
+        ],
+        "start_ms": 64460
+      },
+      {
+        "provided_lines": [
+          19,
+          20
+        ],
+        "start_ms": 68973
+      },
+      {
+        "provided_lines": [
+          21,
+          22
+        ],
+        "start_ms": 73434
+      },
+      {
+        "provided_lines": [
+          23
+        ],
+        "start_ms": 78227
+      },
+      {
+        "provided_lines": [
+          24
+        ],
+        "start_ms": 80604
+      },
+      {
+        "provided_lines": [
+          25
+        ],
+        "start_ms": 82482
+      },
+      {
+        "provided_lines": [
+          26
+        ],
+        "start_ms": 84617
+      },
+      {
+        "provided_lines": [
+          27
+        ],
+        "start_ms": 91580
+      },
+      {
+        "provided_lines": [
+          28
+        ],
+        "start_ms": 93437
+      },
+      {
+        "provided_lines": [
+          29
+        ],
+        "start_ms": 94679
+      },
+      {
+        "provided_lines": [
+          30
+        ],
+        "start_ms": 95742
+      },
+      {
+        "provided_lines": [
+          31
+        ],
+        "start_ms": 97877
+      },
+      {
+        "provided_lines": [
+          32
+        ],
+        "start_ms": 100338
+      },
+      {
+        "provided_lines": [
+          33
+        ],
+        "start_ms": 102265
+      },
+      {
+        "provided_lines": [
+          34
+        ],
+        "start_ms": 103350
+      },
+      {
+        "provided_lines": [
+          35
+        ],
+        "start_ms": 108426
+      },
+      {
+        "provided_lines": [
+          36
+        ],
+        "start_ms": 112656
+      },
+      {
+        "provided_lines": [
+          37,
+          38
+        ],
+        "start_ms": 117460
+      },
+      {
+        "provided_lines": [
+          39,
+          40
+        ],
+        "start_ms": 122472
+      },
+      {
+        "provided_lines": [
+          41
+        ],
+        "start_ms": 126484
+      },
+      {
+        "provided_lines": [
+          42
+        ],
+        "start_ms": 130777
+      },
+      {
+        "provided_lines": [
+          43,
+          44
+        ],
+        "start_ms": 135340
+      },
+      {
+        "provided_lines": [
+          45,
+          46
+        ],
+        "start_ms": 140379
+      },
+      {
+        "provided_lines": [
+          47,
+          48
+        ],
+        "start_ms": 149599
+      },
+      {
+        "provided_lines": [
+          49
+        ],
+        "start_ms": 155606
+      },
+      {
+        "provided_lines": [
+          50
+        ],
+        "start_ms": 159708
+      },
+      {
+        "provided_lines": [
+          51
+        ],
+        "start_ms": 164471
+      },
+      {
+        "provided_lines": [
+          52
+        ],
+        "start_ms": 168827
+      },
+      {
+        "provided_lines": [
+          53,
+          54
+        ],
+        "start_ms": 173269
+      },
+      {
+        "provided_lines": [
+          55
+        ],
+        "start_ms": 184156
+      },
+      {
+        "provided_lines": [
+          56
+        ],
+        "start_ms": 188688
+      },
+      {
+        "provided_lines": [
+          57,
+          58
+        ],
+        "start_ms": 192948
+      },
+      {
+        "provided_lines": [
+          59,
+          60
+        ],
+        "start_ms": 198033
+      },
+      {
+        "provided_lines": [
+          61
+        ],
+        "start_ms": 202028
+      },
+      {
+        "provided_lines": [
+          62
+        ],
+        "start_ms": 206052
+      },
+      {
+        "provided_lines": [
+          63,
+          64
+        ],
+        "start_ms": 210773
+      },
+      {
+        "provided_lines": [
+          65,
+          66
+        ],
+        "start_ms": 215848
+      },
+      {
+        "provided_lines": [
+          67
+        ],
+        "start_ms": 220336
+      },
+      {
+        "provided_lines": [
+          68
+        ],
+        "start_ms": 222733
+      },
+      {
+        "provided_lines": [
+          69
+        ],
+        "start_ms": 224892
+      },
+      {
+        "provided_lines": [
+          70
+        ],
+        "start_ms": 227282
+      },
+      {
+        "provided_lines": [
+          71
+        ],
+        "start_ms": 229140
+      },
+      {
+        "provided_lines": [
+          72
+        ],
+        "start_ms": 231548
+      },
+      {
+        "provided_lines": [
+          73
+        ],
+        "start_ms": 233602
+      },
+      {
+        "provided_lines": [
+          74
+        ],
+        "start_ms": 236003
+      }
+    ],
+    "clear_ms": [
+      38512,
+      87544,
+      105474,
+      182833
+    ],
+    "warnings": [
+      "overlapping_call_and_response_need_listening",
+      "reference_text_has_typos"
+    ]
+  }
+}

@@ -1,5 +1,31 @@
 # CHANGELOG_CODEX.md
 
+## 2026-11-10 21:03 UTC - Lyric text hotfix and audio integrity safeguards
+
+- Rechecked all 42 supplied lyric/translation pairs and decoded every original
+  audio file. Confirmed song_030 has invalid FLAC data, missing PCM samples and
+  a mismatching checksum; its ZIP member is identical, not an extraction error.
+  User subsequently requested deferring this song until replacement audio arrives.
+- Isolated offline ASR dependencies/models under runtime; production environment,
+  keeper, credentials and services are unchanged. ASR is not listening acceptance.
+- Added guarded textual fixes including REVENGE's surrender/happiness homophone,
+  Survive's Dive/Die error, short-line translation order and the inaccurate hymn
+  paraphrase in song_038. Correction rules total 107; 71 apply to active tracks.
+- Hot-updated nine ASS tracks / twelve display cues at 21:03:04 UTC, with exact
+  event times unchanged. Six other text revisions remain pending with old media.
+  The same running process rendered the new song_021 ASS; no service restart.
+- Added four explicitly blocked reference candidates / 151 source-line groups.
+  A user-authorized blind audio probe failed native listening access, so no
+  listening batches ran. The entire 42-song listening acceptance remains open.
+- Added actual PCM/sample-count/checksum validation before new master builds;
+  FFmpeg exit-zero corruption cannot pass. Fifty tests and source guards pass.
+- Waveform samples from 41 tracks / 123 windows match current playback audio
+  with zero detected offset; this is sampled signal comparison, not listening.
+- Full-catalog local ASR evidence is still running at this checkpoint. Details
+  and remaining blockers are in docs/LYRICS_REVIEW_20261110.md. No secrets,
+  original full lyric files, media or runtime artifacts are staged.
+
+
 ## 2026-11-10 12:22 PST - Import editable lyrics and repair playback timing
 
 - Inspected user-supplied ALL.zip without executing its scripts: 42 audio files,

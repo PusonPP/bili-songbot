@@ -1,5 +1,81 @@
 # OPERATION_LOG.md
 
+## 2026-11-10 21:03 UTC - Remaining lyrics: text deployment and audio checks
+
+User requested remaining ten songs and full-catalog line-by-line listening,
+without unnecessary live interruption. The current tool interface cannot
+directly audition audio; this was disclosed. Text review, actual PCM checks and
+independent local ASR are evidence, NOT a listening certificate.
+
+- Read operating documents; initial health OK. Existing unrelated uncommitted
+  changes in these logs (37/51 lines) are preserved and excluded from staging.
+- Backups before edits: `.bak.20261110T203800Z` for the audit, both logs and
+  correction YAML. Created audio-integrity/ASR scripts; all outputs are ignored.
+- Installed diagnostic-only faster-whisper 1.2.1 and soundfile 0.13.1 in
+  runtime/lyrics-audit-venv; no production/global dependency change. Downloaded
+  public Systran/faster-whisper-small revision
+  536b0662742c02347bc0e980a01041f333bce120 without account credentials. Single
+  CPU thread, nice 15. PyAV 19 removed metadata_errors, so use verified FFmpeg
+  PCM decoding for ASR instead; no lyrics prompt and no automatic deployment.
+- All 42 originals fully decoded. Forty clean; song_028's PCM count/MD5 match
+  despite a decoder error; song_030 is missing 156984 sample frames at 44100 Hz.
+  Independent libsndfile also fails on song_030. ZIP CRC valid and SHA256 matches
+  extracted source. Both current and May backup videos contain only 312.947s of
+  audio too. No complete local replacement was found by filename search.
+- User answered to skip song_030 pending their replacement; do not pad, change
+  its declared duration to conceal damage, or attempt further recovery now.
+- Reviewed all 42 supplied text pairs and added source-guarded corrections.
+  Fifteen songs changed; 107 correction entries in total, 71 active. Kept all
+  titles/aliases. Six pending songs received source-text fixes only, not media.
+- User authorized a blind listening capability test with one subagent. Provided
+  a 23.87s local clip; the agent explicitly could not hear it. Closed that agent,
+  did not run listening batches or mislabel ASR as direct audition.
+- Fully inspected the four reference mappings (003/004/016/023), verified public
+  source IDs against cached lyric bytes, and recorded 151 groups with explicit
+  blocking flags. Actual import of all four produced blocked_reference, no ASS.
+- Built textfix release for fifteen songs: nine valid ASS tracks and six
+  pending TXT pairs. Compared every event start/end against active ASS, rendered
+  nine real frames, and confirmed twelve changed display cues with no retiming.
+  At 21:03:04 UTC, while an unaffected song was playing, the guarded local
+  activate_textfix.py backed up old ASS and atomically linked to the new release.
+  YAML now points to the new files for later starts; running renderer resolves
+  links per chunk. Original audio, clean masters, durations and aliases unchanged.
+  At 21:09 UTC song_021's active renderer used 20261110-v3-textfix, same main PID.
+- Additional backups: build_lyric_media.py .bak.20261110T203800Z, songs.yaml
+  and nine ASS .bak.20261110T205500Z, tests/test_lyrics.py .bak.20261110T210404Z.
+  Runtime deployment manifest records backup paths and new ASS hashes. Existing
+  old release ASS paths are now links, not silently overwritten subtitle text.
+- Actual waveform comparison of 41 original/current playback pairs: 3 x 5s
+  windows per song (roughly 10/50/90%), 8 kHz mono, normalized cross-correlation.
+  All 123 peaks at zero relative offset, coefficient range .988657-.999850.
+  song_030 was skipped per user request. This does not certify whole-track,
+  platform-received synchronization or lyric vocal timing.
+
+Commands and checks at this checkpoint:
+
+- `.venv/bin/python scripts/audit_lyric_audio.py --manifest runtime/lyrics-import/catalog-map.json --output runtime/lyrics-audit-20261110/audio-integrity.json`
+- `runtime/lyrics-audit-venv/bin/python scripts/transcribe_lyric_audio.py --manifest runtime/lyrics-audit-20261110/asr-manifest.json --integrity runtime/lyrics-audit-20261110/asr-integrity.json --model runtime/lyrics-audit-model-small --output runtime/lyrics-audit-20261110/asr`
+  remains in progress; completion evidence will be recorded separately.
+- `.venv/bin/python scripts/import_lyrics.py --manifest runtime/lyrics-audit-20261110/textfix-manifest.json --reference-index config/lyric_reference_timings.json --output media/lyrics/20261110-v3-textfix`
+- `.venv/bin/python runtime/lyrics-audit-20261110/activate_textfix.py`
+- `runtime/lyrics-audit-venv/bin/python runtime/lyrics-audit-20261110/compare_playback_audio.py`
+- `.venv/bin/python -m unittest discover -s tests -v`: 50 passed, including actual
+  FFmpeg corruption fixtures, builder rejection, blocked import, subtitle-link
+  refresh and existing render-boundary/transition/song-request regressions.
+- `.venv/bin/python -m compileall -q bili_songbot scripts tests`, `git diff --check`,
+  all 42 correction preconditions: passed. Four blocked imports created no ASS.
+- Health allowlist: ok/pusher/danmaku true, same songbot PID 1962038 and startup
+  20:22:36 UTC; songbot disabled/running, keeper enabled/running, path waiting,
+  black/silent pusher masked/inactive. One RTMP ESTAB; acknowledged bytes grew
+  from 1,152,434,954 at 21:04 to 1,281,273,231 at 21:09 UTC.
+
+No service restart/stop, keeper/systemd/credential edit, raw log output, full push
+arguments, key/cookie/token exposure. Explicit Git paths; original runtime/media
+and unrelated existing doc edits excluded. Short-song corrections may cover all
+eight lines of the supplied hymn, but original complete lyric files are not added.
+Full 42-song line-by-line listening/timing acceptance is NOT passed.
+
+
 ## 2026-11-10 12:22 PST - User lyric archive import and controlled deployment
 
 Scope: analyze the newly supplied ALL.zip and implement concrete title,

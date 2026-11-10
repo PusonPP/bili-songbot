@@ -7,6 +7,12 @@ import json
 import math
 from pathlib import Path
 import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from scripts.audit_lyric_audio import inspect_audio
 
 
 def main() -> None:
@@ -25,11 +31,16 @@ def main() -> None:
         if partial.exists():
             raise ValueError(f"Incomplete previous build: {partial}")
         audio, cover = next(folder.glob("audio.*")), next(folder.glob("cover.*"))
+        integrity = inspect_audio(audio)
+        if not integrity["integrity_passed"]:
+            raise ValueError(f"Source audio failed integrity validation: {item['song_id']}")
+        if abs(integrity["decoded_duration"] - item["audio_duration"]) > .08:
+            raise ValueError(f"Source PCM duration differs from manifest: {item['song_id']}")
         # Still masters use 2 fps; the live renderer expands to 30 fps BEFORE ASS.
         # Pad video to the next half-second, but never pad/trim the source audio.
         video_duration = math.ceil(item["audio_duration"] * 2) / 2
         cmd = [
-            "nice", "-n", "15", "ffmpeg", "-hide_banner", "-nostdin", "-loglevel", "error", "-n",
+            "nice", "-n", "15", "ffmpeg", "-hide_banner", "-nostdin", "-loglevel", "error", "-xerror", "-n",
             "-filter_threads", "1", "-loop", "1", "-framerate", "2", "-i", str(cover),
             "-i", str(audio), "-map", "0:v:0", "-map", "1:a:0", "-map_metadata", "-1",
             "-vf", "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,"

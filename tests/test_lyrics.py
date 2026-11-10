@@ -2,15 +2,17 @@ from __future__ import annotations
 
 import asyncio
 from dataclasses import replace
+import hashlib
 import json
 from pathlib import Path
 import shutil
 import subprocess
 import tempfile
 import unittest
-from unittest.mock import AsyncMock, Mock
+from unittest.mock import AsyncMock, Mock, patch
 
 import pysubs2
+import yaml
 from PIL import Image
 
 from bili_songbot.config import AppConfig
@@ -19,6 +21,7 @@ from bili_songbot.lyrics import LyricCue, bilingual_ass, read_bilingual_lrc, val
 from bili_songbot.models import RuntimeStatus, Song
 from bili_songbot.renderer import FFmpegRenderer
 from scripts.import_lyrics import apply_reference_timing, correct_text
+from scripts import import_lyrics
 
 FONT = Path("/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc")
 
@@ -110,7 +113,64 @@ class LrcTests(unittest.TestCase):
         self.assertIn(r"\pos(850,365)", text)
 
 
+class BlockedReferenceTests(unittest.TestCase):
+    def test_blocked_candidate_cannot_create_deployable_assets(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "config").mkdir()
+            (root / "raw.txt").write_text("one\ntwo\n")
+            (root / "zh.txt").write_text("first\nsecond\n")
+            (root / "config/songs.yaml").write_text(yaml.safe_dump({
+                "songs": [{"song_id": "song_003", "display_name": "test"}]}))
+            (root / "config/lyric_corrections.yaml").write_text("corrections: {}\n")
+            (root / "manifest.json").write_text(json.dumps([{
+                "song_id": "song_003", "raw": "raw.txt", "translation": "zh.txt",
+                "format": ".txt", "audio_duration": 10,
+            }]))
+            (root / "reference.json").write_text(json.dumps({"song_003": {
+                "source_sha256": hashlib.sha256((root / "raw.txt").read_bytes()).hexdigest(),
+                "audio_duration": 10, "blocked_reason": "needs_listening",
+                "groups": [{"provided_lines": [1, 2], "start_ms": 1000}],
+            }}))
+            output = root / "release"
+            with patch.object(import_lyrics, "ROOT", root), patch("sys.argv", [
+                "import_lyrics", "--manifest", str(root / "manifest.json"),
+                "--output", str(output), "--reference-index", str(root / "reference.json"),
+            ]):
+                import_lyrics.main()
+            result = json.loads((output / "manifest.json").read_text())[0]
+            self.assertEqual(result["status"], "blocked_reference")
+            self.assertEqual(result["block_reason"], "needs_listening")
+            self.assertFalse((output / "song_003/lyrics.ass").exists())
+            self.assertFalse((output / "song_003/cues.json").exists())
+
+    def test_all_pending_reference_candidates_remain_blocked(self):
+        path = Path(__file__).resolve().parents[1] / "config/lyric_review_candidates.json"
+        candidates = json.loads(path.read_text())
+        self.assertEqual(set(candidates), {"song_003", "song_004", "song_016", "song_023"})
+        for reference in candidates.values():
+            self.assertTrue(reference["blocked_reason"])
+            self.assertEqual(reference["listening_review"], "not_performed")
+            self.assertIsInstance(reference["reference_song_id"], int)
+
+
 class PlaybackTests(unittest.IsolatedAsyncioTestCase):
+    def test_renderer_resolves_updated_subtitle_link_on_next_chunk(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            old, new, link = root / "old.ass", root / "new.ass", root / "live.ass"
+            old.touch()
+            new.touch()
+            link.symlink_to(old)
+            cfg = AppConfig(root, root / "songs", root / "app", root / "env")
+            renderer = FFmpegRenderer(cfg, Mock())
+            song = Song("one", "one", "one.mp4", [], lyrics_file_path="live.ass")
+            self.assertIn(f"ass=filename='{old}'", renderer._song_video_filter(song, 0))
+            temporary = root / "next.ass"
+            temporary.symlink_to(new)
+            temporary.replace(link)
+            self.assertIn(f"ass=filename='{new}'", renderer._song_video_filter(song, 20))
+
     async def test_controller_plays_full_tail_and_next_intro(self):
         app = SongbotApp.__new__(SongbotApp)
         app.cfg = AppConfig(Path("."), Path("songs"), Path("app"), Path("env"))

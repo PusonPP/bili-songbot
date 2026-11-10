@@ -159,7 +159,7 @@ songs:
   notes: 日文原名：Never ending saga；中文译名：永无止境的佐贺；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_005_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_005/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_005/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_005/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -216,7 +216,7 @@ songs:
   notes: 日文原名：REVENGE；中文译名：REVENGE；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_007_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_007/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_007/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_007/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -566,7 +566,7 @@ songs:
   notes: 日文原名：ぶっちゃけてフォーユー；中文译名：为你献上真心；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_017_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_017/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_017/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_017/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -639,7 +639,7 @@ songs:
   notes: 日文原名：徒花ネクロマンシー；中文译名：徒花招魂术；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_019_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_019/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_019/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_019/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -709,7 +709,7 @@ songs:
   notes: 日文原名：ヨミガエレ；中文译名：复苏吧；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_021_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_021/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_021/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_021/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -1186,7 +1186,7 @@ songs:
   notes: 日文原名：風の強い日は嫌いか？ FranChouChou cover；中文译名：讨厌风大的日子吗？ FranChouChou cover；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_034_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_034/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_034/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_034/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -1226,7 +1226,7 @@ songs:
   notes: 日文原名：風の強い日は嫌いか？；中文译名：讨厌风大的日子吗？；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_035_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_035/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_035/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_035/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -1258,7 +1258,7 @@ songs:
   notes: 日文原名：冒険ズンドコドン!；中文译名：冒险吱咚咳咚；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_036_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_036/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_036/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_036/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
@@ -1474,7 +1474,7 @@ songs:
   notes: 日文原名：悠久ネバーダイ；中文译名：悠久Never Die；别名已清理：剔除跨多首重复或过宽泛的团体名、集数描述、角色名。
   normalized_file_path: media/normalized/song_042_720p30.mp4
   preprocessed_file_path: media/lyrics/20261110-v1/song_042/clean.mp4
-  lyrics_file_path: media/lyrics/20261110-v1/song_042/lyrics.ass
+  lyrics_file_path: media/lyrics/20261110-v3-textfix/song_042/lyrics.ass
   transition_policy:
     enabled: true
     mode: alpha_overlay
